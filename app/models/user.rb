@@ -7,6 +7,6 @@ class User < ApplicationRecord
   has_many :likes
   has_many :participations
   has_many :events
-  has_many :attended_events, through: :participations, source: :events
-  has_many :liked_creations, through: :likes, source: :creations
+  has_many :attended_events, through: :participations, source: :event
+  has_many :liked_creations, through: :likes, source: :creation
 end
