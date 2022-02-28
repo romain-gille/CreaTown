@@ -2,4 +2,5 @@ class Creation < ApplicationRecord
   belongs_to :user
   has_many :likes
   has_many :event_creations
+  has_many :events, through: :event_creations
 end
