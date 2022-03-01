@@ -1,0 +1,11 @@
+<div class="categories-container container">
+  <ul class= "d-flex justify-content-center my-3">
+    <% @categories.each do |cat| %>
+      <li class= "category-item">
+        <button >
+          <i class='<%= cat %>'></i>
+        </li>
+      </button>
+    <% end %>
+  </ul>
+</div>
