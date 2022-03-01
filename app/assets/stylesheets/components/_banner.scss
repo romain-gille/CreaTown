@@ -5,3 +5,7 @@
   background-size: cover;
   color: white;
 }
+
+.sticky_footer-banner {
+  min-height: calc(100vh - 56px);
+}
