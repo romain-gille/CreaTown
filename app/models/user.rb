@@ -9,4 +9,5 @@ class User < ApplicationRecord
   has_many :events
   has_many :attended_events, through: :participations, source: :event
   has_many :liked_creations, through: :likes, source: :creation
+  has_one_attached :photo
 end

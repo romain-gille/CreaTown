@@ -4,4 +4,5 @@ class Event < ApplicationRecord
   has_many :guests, through: :participations, source: :user
   has_many :event_creations
   has_many :creations, through: :event_creations
+  has_one_attached :photo
 end
