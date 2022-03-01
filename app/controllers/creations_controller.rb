@@ -13,4 +13,8 @@ class CreationsController < ApplicationController
       render :new
     end
   end
+  
+  def show
+    @creation = Creation.find(params[:id])
+  end
 end
