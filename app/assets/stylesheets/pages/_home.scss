@@ -1,1 +1,4 @@
 // Specific CSS for your home-page
+.sticky_footer {
+  min-height: calc(100vh - 100px);
+}

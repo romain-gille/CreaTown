@@ -1,0 +1,17 @@
+<div class="container">
+  <h1><%= @creation.name %></h1>
+
+    <div class="row">
+      <div class="col-12 col-lg-8 border showpage-image-container">
+        <%# <img src="<%= @creation.photo.url %>
+        <%= image_tag ("sunflower.jpg")%>
+      </div>
+
+      <div class="col-12 col-lg-4 border">
+        <p><%= @creation.description %> This is the description</p>
+        <p><%= @creation.category %> This is the category</p>
+        <p>Created on<%= @creation.date %> This is the date</p>
+      </div>
+
+    </div>
+</div>
