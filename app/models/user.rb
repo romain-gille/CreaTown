@@ -9,4 +9,6 @@ class User < ApplicationRecord
   has_many :events, dependent: :destroy
   has_many :attended_events, through: :participations, source: :event, dependent: :destroy
   has_many :liked_creations, through: :likes, source: :creation, dependent: :destroy
+  has_one_attached :photo
+
 end
