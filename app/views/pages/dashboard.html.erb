@@ -1,14 +1,14 @@
 <div>
   <div class="card-container">
     <h1>My creations</h1>
-    <% if @creations.empty? %>
+    <% if true %><%# if @creations.empty? %>
       <h2 class="text-center my-3">You have no Creations yet</h2>
     <% else %>
-    <div>
-      <% @creations.each do |creation| %>
-        <%= render :partial => 'card', locals: { creation: @creation, user: @user } %>
-      <% end %>
-    </div>
+      <div>
+        <% @creations.each do |creation| %>
+          <%= render :partial => 'card', locals: { creation: @creation, user: @user } %>
+        <% end %>
+      </div>
     <% end %>
   </div>
 </div>
