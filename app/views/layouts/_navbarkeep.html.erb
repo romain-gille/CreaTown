@@ -1,0 +1,53 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <%= link_to "CreaTown", root_path, class: "navbar-brand" %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <% if user_signed_in? %>
+          <li class="nav-item">
+            <%= link_to "Add a Creation", root_path, class: "nav-link active" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Add an Event", root_path, class: "nav-link " %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Creations and Events", root_path, class: "nav-link " %>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dashboard
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><%= link_to "My Creations", root_path, class: "dropdown-item" %></li>
+              <li><%= link_to "Liked Creations", root_path, class: "dropdown-item" %></li>
+              <li><%= link_to "My Events", root_path, class: "dropdown-item" %></li>
+              <li><%= link_to "Attended Events", root_path, class: "dropdown-item" %></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              username <i class="fas fa-user-alt"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+              <li><a class="dropdown-item" href="#">Account</a></li>
+              <li><a class="dropdown-item" href="#">Update Profile</a></li>
+              <li><%= link_to "Account", root_path, class: "dropdown-item" %></li>
+              <li><%= link_to "Update Profile", edit_user_registration_path, class: "dropdown-item" %></li>
+              <li><%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "dropdown-item" %></li>
+            </ul>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "Log In", new_user_session_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Sign Up", new_user_registration_path, class: "nav-link" %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>

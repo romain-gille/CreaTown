@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <%= link_to "CreaTown", root_path, class: "navbar-brand" %>
+    </div>
+    <div class="collapse navbar-collapse flex-grow-1 text-right" id="navbarNavDropdown">
+      <ul class="navbar-nav me-auto mb-5 mb-lg-0 ">
+        <%= render "layouts/navbar_content" %>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" data-bs-keyboard="false" data-bs-backdrop="true">
+  <div class="offcanvas-header ">
+    <h6 class="offcanvas-title d-none d-sm-block" id="offcanvas">Menu</h6>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body px-0">
+    <ul class="nav flex-column mb-sm-auto mb-0 align-items-start" id="menu">
+      <%= render "layouts/navbar_content" %>
+    </ul>
+  </div>
+</div>

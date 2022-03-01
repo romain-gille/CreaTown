@@ -1,0 +1,39 @@
+ <% if user_signed_in? %>
+  <li class="nav-item">
+    <%= link_to raw('<i class="fas fa-plus"></i> Add a Creation'), root_path, class: "nav-link active"%>
+  </li>
+  <li class="nav-item">
+    <%= link_to raw('<i class="fas fa-plus"></i> Add an Event'), root_path, class: "nav-link " %>
+  </li>
+  <li class="nav-item">
+    <%= link_to raw('<i class="fab fa-sistrix"></i> Creations and Events'), root_path, class: "nav-link " %>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="fas fa-list"></i> Dashboard
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+      <li><%= link_to "My Creations", root_path, class: "dropdown-item" %></li>
+      <li><%= link_to "Liked Creations", root_path, class: "dropdown-item" %></li>
+      <li><%= link_to "My Events", root_path, class: "dropdown-item" %></li>
+      <li><%= link_to "Attended Events", root_path, class: "dropdown-item" %></li>
+    </ul>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="fas fa-user-alt"></i> <%= current_user.email %>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+      <li><%= link_to "Account", root_path, class: "dropdown-item" %></li>
+      <li><%= link_to "Update Profile", edit_user_registration_path, class: "dropdown-item" %></li>
+      <li><%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "dropdown-item" %></li>
+    </ul>
+  </li>
+<% else %>
+  <li class="nav-item">
+    <%= link_to "Log In", new_user_session_path, class: "nav-link" %>
+  </li>
+  <li class="nav-item">
+    <%= link_to "Sign Up", new_user_registration_path, class: "nav-link" %>
+  </li>
+<% end %>
