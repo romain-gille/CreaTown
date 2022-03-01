@@ -1,13 +1,14 @@
-<div class = "container-fluid sticky_footer home-banner d-flex align-items-center  justify-content-center">
+<div class = "container-fluid sticky_footer home-banner d-flex align-items-center  justify-content-left">
   <div class="content-banner d-flex flex-column align-items-center ">
-    <h1>Homepage</h1>
-    <p>Bob the builder is still hard at work please do not disturb.</p>
+    <h1>Welcome to CreaTown</h1>
+    <p>You want to see the cool creations of your Neighbors and find a community near you? Come in!</p>
+    <%= link_to "See the Creations!", index_path, class:"btn btn-custom btn-lg"  %>
   </div>
 </div>
 <div class="container justify-content-center">
   <div class="row justify-content-evenly">
-    <div class="col-4 mt-5">
-        <img src="images/sunset.jpg" alt="Example Creation">
+    <div class="col-4 mt-5 example-picture">
+      <i class="fas fa-lightbulb"></i>
     </div>
     <div class="col-4 mt-5">
       <h3 class="text-center">Creations</h3>
@@ -18,7 +19,7 @@
 <div class="container justify-content-center">
   <div class="row justify-content-evenly">
     <div class="col-4 mt-5">
-      <p>Picture here</p>
+      <i class="fas fa-calendar-alt"></i>
     </div>
     <div class="col-4 mt-5">
       <h3 class="text-center">Events</h3>
