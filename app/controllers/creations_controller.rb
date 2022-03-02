@@ -13,8 +13,14 @@ class CreationsController < ApplicationController
       render :new
     end
   end
-  
+
   def show
     @creation = Creation.find(params[:id])
+  end
+
+  private
+
+  def strong_params
+    params.require(:creation).permit(:name, :category, :description, :photos)
   end
 end
