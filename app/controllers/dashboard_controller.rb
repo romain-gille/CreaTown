@@ -1,15 +1,24 @@
 class DashboardController < ApplicationController
+  before_action :set_user
   def mycreations
-    @user = current_user
-    @creations =  current_user.creations
+    @creations = current_user.creations
   end
 
   def likedcreations
+    @creations_liked = current_user.liked_creations
   end
 
   def myevents
+    @events = current_user.events
   end
 
   def attendedevents
+    @events_attended = current_user.participations
+  end
+
+  private
+
+  def set_user
+    @user = current_user
   end
 end
