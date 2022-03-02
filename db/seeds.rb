@@ -72,6 +72,8 @@ users = {}
 #  users = {jul: instance of user that gets created by the iteration, jul being key }
 # slug is a technique to quickly identify the associated user data
 
+puts "Creating users"
+
 user_data.each do |data|
   user = User.new(user_name: data[:user_name], location: data[:location],
                   email: data[:email], password: data[:password], description: data[:description])
@@ -181,6 +183,8 @@ creation_data.each do |data|
   creation.save!
 end
 
+puts "Creating creations :))"
+
 events_data = [
   {
     user: users["jul"],
@@ -232,6 +236,8 @@ events_data = [
     img_url: "https://www.collinsdictionary.com/images/full/gardening_380327731_1000.jpg"
   }
 ]
+
+puts "And finally creating events!"
 
 events_data.each do |data|
   event = Event.new(user: data[:user], location: data[:location], date: data[:date], description: data[:description],
