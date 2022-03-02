@@ -1,5 +1,5 @@
-<div>
-  <a class="card" href='#'>
+<div class="card">
+  <%= link_to creation_path(creation) do %>
     <div class = "card-img-top">
       <% if creation.photos.attached? %>
         <img src="<%= creation.photos.first.url %>" alt="">
@@ -9,7 +9,10 @@
     </div>
     <div class="card-body">
       <h4><%= creation.name %></h4>
-      <h6>❤ <%= creation.likes.length %></h6>
+      <div class="d-flex align-items-baseline">
+        <%= render partial: "partials/like", locals: {my_creation: creation, my_like: current_user.liked_creations.include?(creation) ? current_user.likes.find {|lik| lik.creation == creation} : Like.new} %>
+        <h6> <%= creation.likes.length %></h6>
+      </div>
     </div>
-  </a>
+  <% end %>
 </div>
