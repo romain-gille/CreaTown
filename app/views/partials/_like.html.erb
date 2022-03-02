@@ -1,0 +1,10 @@
+<% if current_user.liked_creations.include?(my_creation) %>
+  <%= link_to like_path(my_like),{method: "delete", :my_creation => my_creation, :my_like => my_like}  do %>
+    <i class="far fa-heart"></i>
+    <p>eeeeee</p>
+  <% end %>
+<% else %>
+  <%= link_to creation_likes_path(my_creation), method: "post" do %>
+    <i class="fas fa-heart"></i>
+  <% end %>
+<% end %>
