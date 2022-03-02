@@ -8,12 +8,12 @@ class PagesController < ApplicationController
     @categories = ["fab fa-canadian-maple-leaf", "fas fa-palette", "fas fa-cookie-bite", "fas fa-film",
                    "fas fa-microchip", "fas fa-feather-alt", "fas fa-bars"]
   end
-  
+
   def dashboard
-    #@user = User.all.filter { |user| user == current_user }
-    @user = User.all.sample
-    #@creations = Creation.all.filter { |creation| creation.user == current_user }
-    @creations = Creation.all.sample
+    @user = User.all.filter { |user| user == current_user }
+    #@user = User.all.sample
+    @creations = Creation.all.filter { |creation| creation.user == current_user }
+    #@creations = Creation.all.sample
   end
 end
 
