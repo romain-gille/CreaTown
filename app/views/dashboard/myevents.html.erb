@@ -1,6 +1,14 @@
-<div>
-  <div class="card-container">
+<div class="container">
+  <div>
     <h1>My Events</h1>
-    <h2 class="text-center my-3">You have no Events yet</h2>
+    <% if @events.empty? %>
+      <h2 class="text-center my-3">You have no Events yet</h2>
+    <% else %>
+      <div  class="card-container">
+        <% @events.each do |event| %>
+          <%= render :partial => 'partials/event_card', locals: { event: event, user: @user } %>
+        <% end %>
+      </div>
+    <% end %>
   </div>
 </div>
