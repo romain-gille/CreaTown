@@ -5,7 +5,6 @@ class CreationsController < ApplicationController
 
   def create
     @creation = Creation.new(strong_params)
-    # @car.user = User.all.sample
     @creation.user = current_user
     if @creation.save
       redirect_to creation_path(@creation)
@@ -26,6 +25,6 @@ class CreationsController < ApplicationController
   private
 
   def strong_params
-    params.require(:creation).permit(:name, :category, :description, :photos)
+    params.require(:creation).permit(:name, :category, :description, :photos, :date)
   end
 end
