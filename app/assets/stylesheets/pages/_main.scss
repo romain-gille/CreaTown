@@ -19,3 +19,38 @@
     }
   }
 }
+
+.horizontal-scroll {
+  display: flex;
+  gap: 5px;
+  height: 320px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__item {
+    align-items: center;
+    background-color: white;
+    color: white;
+    border: 1px solid black;
+    display: flex;
+    flex: 0 0 320px;
+    font-size: 40px;
+    justify-content: center;
+    scroll-snap-align: start;
+  }
+}
+
+.no-width-card {
+  width: 320px !important;
+  display: block !important;
+}
+
+a {
+  text-decoration: none;
+  color: $our_orange;
+}

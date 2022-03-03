@@ -15,7 +15,7 @@ h1 {
   font-family: Merriweather;
   font-style: normal;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 2.2rem;
   line-height: 50px;
 }
 
@@ -23,18 +23,39 @@ h3 {
   font-family: Merriweather;
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 2rem;
   line-height: 28px;
 }
 
-.example-picture {
-  background-image: none, url("../../images/sunsett.jpg")
+h6 {
+  font-size: 1rem;
 }
 
-.btn-custom{
+a {
+  text-decoration: none;
+}
+
+.example-picture {
+  // background-image: none, url("../../images/sunsett.jpg")
+}
+
+.btn-custom {
   background-color: #ff9000;
 }
 
-.content-banner{
+.content-banner {
   margin-left: 100px;
+}
+
+@media(max-width: 800px) {
+  p {
+    font-size: 16px;
+    width: auto;
+  }
+}
+
+@media(max-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
 }
