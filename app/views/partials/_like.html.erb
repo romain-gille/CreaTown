@@ -1,9 +1,11 @@
-<% if current_user.liked_creations.include?(my_creation) %>
-  <%= link_to like_path(my_like),{method: "delete"}, class: "like-button"  do %>
-    <i class="fas fa-heart"></i>
+<div    >
+  <% if current_user.liked_creations.include?(my_creation) %>
+    <%= link_to like_path(my_like),{method: "delete", class: "like-button", data: {controller:"like", like_target:"likebutton",  action: "click->like#togglelike" }} do %>
+      <i class="fas fa-heart" ></i>
+    <% end %>
+  <% else %>
+    <%= link_to creation_likes_path(my_creation), {method: "post", :my_creation => my_creation, class: "like-button", data: {controller:"like", like_target:"likebutton", action: "click->like#togglelike"}} do %>
+      <i class="far fa-heart"></i>
+    <% end %>
   <% end %>
-<% else %>
-  <%= link_to creation_likes_path(my_creation), {method: "post", :my_creation => my_creation}, class: "like-button" do %>
-    <i class="far fa-heart"></i>
-  <% end %>
-<% end %>
+</div>
