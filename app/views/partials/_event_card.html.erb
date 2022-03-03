@@ -1,11 +1,15 @@
-<div>
-  <a class="card" href='#'>
+<div class="card">
+  <%= link_to event_path(event) do %>
     <div class = "card-img-top">
-      <img src="https://www.pandotrip.com/wp-content/uploads/2015/10/Top-Graffiti-Stockholm-Photo-by-Alexander-Dragunov.jpg" alt="">
+      <% if event.photo.attached? %>
+        <img src="<%= event.photo.url %>" alt="">
+      <% else %>
+        <img src="https://www.pandotrip.com/wp-content/uploads/2015/10/Top-Graffiti-Stockholm-Photo-by-Alexander-Dragunov.jpg" alt="">
+      <% end %>
     </div>
     <div class="card-body">
       <h4><%= event.date %></h4>
       <h6><%= event.location %></h6>
     </div>
-  </a>
+  <% end %>
 </div>

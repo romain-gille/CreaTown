@@ -1,0 +1,13 @@
+<div class="container sticky_footer">
+  <h1><%= @event.date %></h1>
+  <h2><%= @event.location %></h2>
+  <div class="row">
+    <div class="col-12 col-lg-8 border showpage-image-container">
+      <img src="<%= @event.photo.url %>">
+    </div>
+    <div class="col-12 col-lg-4 border">
+      <h2>About this event</h2>
+      <p><%= @event.description %></p>
+    </div>
+  </div>
+</div>
