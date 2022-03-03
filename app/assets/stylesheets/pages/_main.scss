@@ -46,5 +46,11 @@
 }
 
 .no-width-card {
-  width: unset !important;
+  width: 320px !important;
+  display: block !important;
+}
+
+a {
+  text-decoration: none;
+  color: $our_orange;
 }

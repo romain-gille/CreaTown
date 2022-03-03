@@ -7,7 +7,7 @@
         <img src="https://www.pandotrip.com/wp-content/uploads/2015/10/Top-Graffiti-Stockholm-Photo-by-Alexander-Dragunov.jpg" alt="">
       <% end %>
     </div>
-    <div class="card-body">
+    <div class="card-body card-body-container">
       <h4><%= creation.name %></h4>
       <div class="d-flex align-items-baseline">
         <%= render partial: "partials/like", locals: {my_creation: creation, my_like: current_user.liked_creations.include?(creation) ? current_user.likes.find {|lik| lik.creation == creation} : Like.new} %>
