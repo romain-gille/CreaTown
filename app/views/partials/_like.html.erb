@@ -1,11 +1,12 @@
-<div    >
+<div class="d-flex align-items-baseline" data-controller="like" data-like-target = "textandbutton">
   <% if current_user.liked_creations.include?(my_creation) %>
-    <%= link_to like_path(my_like),{method: "delete", class: "like-button", data: {controller:"like", like_target:"likebutton",  action: "click->like#togglelike" }} do %>
+    <%= link_to like_path(my_like),{method: "delete", class: "like-button", data: { like_target:"likebutton",  action: "click->like#deletelike" }} do %>
       <i class="fas fa-heart" ></i>
     <% end %>
   <% else %>
-    <%= link_to creation_likes_path(my_creation), {method: "post", :my_creation => my_creation, class: "like-button", data: {controller:"like", like_target:"likebutton", action: "click->like#togglelike"}} do %>
+    <%= link_to creation_likes_path(my_creation), {method: "post", :my_creation => my_creation, class: "like-button", data: { like_target:"likebutton", action: "click->like#addlike"}} do %>
       <i class="far fa-heart"></i>
     <% end %>
   <% end %>
+  <h6> <%= pluralize(my_creation.likes.length, 'Like')%></h6>
 </div>
