@@ -13,7 +13,7 @@ class DashboardController < ApplicationController
   end
 
   def attendedevents
-    @events_attended = current_user.participations
+    @events_attended = current_user.attended_events
   end
 
   private

@@ -191,6 +191,7 @@ events_data = [
     location: "Munich, Schwabing",
     date: Date.new(2022, 3, 22),
     description: "Pop-Up Art Show at RaumEinsAtelier, Schwabing",
+    slug: "event1",
     longitude: 48.15,
     latitude: 11.4,
     img_url: "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/d104c760090689.5a3b6009c36bd.jpg"
@@ -246,3 +247,5 @@ events_data.each do |data|
   event.photo.attach(io: file, filename: "event.jpg", content_type: "image/jpg")
   event.save!
 end
+puts "creating participation"
+Participation.create(user: User.all.first, event: Event.all.first)
