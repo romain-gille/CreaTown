@@ -6,7 +6,6 @@ class CreationsController < ApplicationController
   def create
     @creation = Creation.new(strong_params)
     @creation.user = current_user
-
     if @creation.save
       redirect_to creation_path(@creation)
     else
