@@ -1,13 +1,21 @@
 <div class="container sticky_footer">
   <%= render "layouts/categories" %>
+  <% if @events.empty? %>
+    <h2 class="text-center my-3">You have no Events yet</h2>
+  <% else %>
+    <div class="horizontal-scroll">
+      <% @events.each do |event| %>
+        <%= render :partial => "partials/event_card", locals: { event: event, user: @user } %>
+      <% end %>
+    </div>
+  <% end %>
   <% if @creations.empty? %>
     <h2 class="text-center my-3">You have no Creations yet</h2>
   <% else %>
-    <div  class="">
-      <div class="horizontal-scroll">
-        <% @creations.each do |creation| %>
-            <%= render :partial => 'partials/card', locals: { creation: creation, user: @user } %>
-        <% end %>
-      </div>
+    <div class="horizontal-scroll">
+      <% @creations.each do |creation| %>
+        <%= render :partial => 'partials/card', locals: { creation: creation, user: @user } %>
+      <% end %>
+    </div>
   <% end %>
 </div>

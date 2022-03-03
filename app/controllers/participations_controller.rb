@@ -15,7 +15,7 @@ class ParticipationsController < ApplicationController
   def destroy
     @participation = Participation.find(params[:id])
     @event = @participation.event
-    @event.destroy!
+    @participation.destroy!
     respond_to do |format|
       format.html { redirect_to event_path(@event) }
       format.text do
