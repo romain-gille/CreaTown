@@ -4,9 +4,11 @@
     <h2 class="text-center my-3">You have no Creations yet</h2>
   <% else %>
     <div  class="card-container border">
-      <% @creations.each do |creation| %>
-        <%= render :partial => 'partials/card', locals: { creation: creation, user: @user } %>
-      <% end %>
+      <div class="horizontal-scroll">
+        <% @creations.each do |creation| %>
+            <%= render :partial => 'partials/card', locals: { creation: creation, user: @user } %>
+        <% end %>
+      </div>
     </div>
   <% end %>
 </div>
