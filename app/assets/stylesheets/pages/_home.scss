@@ -35,10 +35,6 @@ a {
   text-decoration: none;
 }
 
-.example-picture {
-  // background-image: none, url("../../images/sunsett.jpg")
-}
-
 .btn-custom {
   background-color: #ff9000;
 }
@@ -48,6 +44,7 @@ a {
 }
 
 @media (max-width: 800px) {
+
   p {
     font-size: 16px;
     width: auto;
