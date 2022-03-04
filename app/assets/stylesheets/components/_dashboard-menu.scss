@@ -1,0 +1,10 @@
+.btn-dashboard {
+  text-align: center;
+  font-weight: bold;
+  &:hover {
+    border-bottom: solid grey 2px;
+  }
+}
+.container-dashboard {
+  height: 3rem;
+}

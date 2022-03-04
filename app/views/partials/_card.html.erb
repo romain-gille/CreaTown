@@ -1,4 +1,4 @@
-<div class="card horizontal-scroll__item no-width-card">
+<div class="card ">
   <%= link_to creation_path(creation) do %>
     <div class = "card-img-top">
       <% if creation.photos.attached? %>
@@ -9,7 +9,9 @@
     </div>
     <div class="card-body card-body-container">
       <h4><%= creation.name %></h4>
-      <%= render partial: "partials/like", locals: {my_creation: creation, my_like: current_user.liked_creations.include?(creation) ? current_user.likes.find {|lik| lik.creation == creation} : Like.new} %>
     </div>
   <% end %>
+  <div class = "button-container">
+    <%= render partial: "partials/like", locals: {my_creation: creation, my_like: current_user.liked_creations.include?(creation) ? current_user.likes.find {|lik| lik.creation == creation} : Like.new} %>
+  </div>
 </div>

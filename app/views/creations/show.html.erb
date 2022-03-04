@@ -1,12 +1,14 @@
 <div class="container sticky_footer">
-  <h1><%= @creation.name %></h1>
+  <h1 class= "py-2"><%= @creation.name %></h1>
   <div class="row">
-    <div class="col-12 col-lg-8 border showpage-image-container">
-      <img src="<%= @creation.photos.first.url %>">
+    <div class="col-12 col-lg-8 showpage-image-container py-2">
+      <img src="<%= @creation.photos.first.url %>" class="rounded ">
     </div>
-    <div class="col-12 col-lg-4 border">
-      <p>This is the description <%= @creation.description %></p>
-      <p>This is the category <%= @creation.category %></p>
+    <div class="col-12 col-lg-4 ">
+      <h5>Description</h5>
+      <p><%= @creation.description %></p>
+      <h5>Category</h5>
+      <p><%= @creation.category %></p>
       <p>Created on <%= @creation.date.strftime("%b %d, %Y") %></p>
       <%= render partial: "partials/like", locals: {my_creation: @creation, my_like: @like} %>
     </div>

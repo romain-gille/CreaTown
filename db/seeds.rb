@@ -188,6 +188,7 @@ puts "Creating creations :))"
 events_data = [
   {
     user: users["jul"],
+    title: "Pop-Up Schwabing Style",
     location: "Munich, Schwabing",
     date: Date.new(2022, 3, 22),
     description: "Pop-Up Art Show at RaumEinsAtelier, Schwabing",
@@ -199,6 +200,7 @@ events_data = [
 
   {
     user: users["jam"],
+    title: "World from above",
     location: "Munich, Giesinger Bräu",
     date: Date.new(2022, 3, 18),
     description: "The world from above - exibition of aerial photography",
@@ -209,6 +211,7 @@ events_data = [
 
   {
     user: users["hir"],
+    title: "Japalicious",
     location: "Munich, Glockenbachwerkstatt",
     date: Date.new(2022, 1, 22),
     description: "Japanese home cooking with Hiromi",
@@ -219,6 +222,7 @@ events_data = [
 
   {
     user: users["raj"],
+    title: "Cosplay Time",
     location: "Munich",
     date: Date.new(2022, 1, 24),
     description: "Better than comicon: Raj's comic book collection. Trade your comics, rent a cosplayer and much more.",
@@ -229,6 +233,7 @@ events_data = [
 
   {
     user: users["rit"],
+    title: "Tropics made easy",
     location: "Munich, Gemeindehaus St. Johann",
     date: Date.new(2022, 3, 22),
     description: "Gardening with Rita: what kinds of tropical plants are easy to grow in your own home.",
@@ -238,14 +243,14 @@ events_data = [
   }
 ]
 
-puts "And finally creating events!"
+puts "Creating events!"
 
 events_data.each do |data|
-  event = Event.new(user: data[:user], location: data[:location], date: data[:date], description: data[:description],
+  event = Event.new(user: data[:user],title: data[:title], location: data[:location], date: data[:date], description: data[:description],
                     longitude: data[:longitude], latitude: data[:latitude])
   file = URI.open(data[:img_url])
   event.photo.attach(io: file, filename: "event.jpg", content_type: "image/jpg")
   event.save!
 end
-puts "creating participation"
+puts "And finally creating participations!"
 Participation.create(user: User.all.first, event: Event.all.first)

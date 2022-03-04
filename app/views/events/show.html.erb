@@ -1,13 +1,15 @@
 <div class="container sticky_footer">
-  <h1><%= @event.date %></h1>
-  <h2><%= @event.location %></h2>
+  <h1 class= "py-2"><%= @event.title %></h1>
+  <h4><i class="fas fa-map-marker-alt"></i> <%= @event.location %></h4>
   <div class="row">
-    <div class="col-12 col-lg-8 border showpage-image-container">
-      <img src="<%= @event.photo.url %>">
+    <div class="col-12 col-lg-8 showpage-image-container py-4">
+      <img src="<%= @event.photo.url %>" class="rounded ">
     </div>
-    <div class="col-12 col-lg-4 border">
+    <div class="col-12 col-lg-4 ">
       <h2>About this event</h2>
+      <h5><i class="fas fa-calendar-check"> <%= @event.date %></i></h5>
       <p><%= @event.description %></p>
+      <%= render partial: "partials/participation", locals: {my_event: @event, my_participation: current_user.attended_events.include?(@event) ? current_user.participations.find {|part| part.event == @event} : Participation.new} %>
     </div>
   </div>
 </div>

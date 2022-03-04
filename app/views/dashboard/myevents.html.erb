@@ -1,10 +1,11 @@
 <div class="container sticky_footer pt-3 ">
+  <%= render "partials/dashboard-menu" %>
   <div>
     <h1>My Events</h1>
     <% if @events.empty? %>
       <h2 class="text-center my-3">You have no Events yet</h2>
     <% else %>
-      <div  class="card-container">
+      <div  class="horizontal-scroll">
         <% @events.each do |event| %>
           <%= render :partial => 'partials/event_card', locals: { event: event, user: @user } %>
         <% end %>
