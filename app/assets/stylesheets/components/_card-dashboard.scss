@@ -19,6 +19,7 @@
     border-radius: 10px;
   }
 }
+
 .card-container {
   display: grid;
   justify-items: center;
@@ -43,6 +44,11 @@
   align-items: center;
   justify-content: space-between;
 }
+
+.card-body {
+  height: 100%;
+  * {
+    color: white;
 
 @media (max-width: 1600px) {
   .card-container-dashboard {

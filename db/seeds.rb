@@ -195,7 +195,7 @@ events_data = [
     slug: "event1",
     longitude: 48.15,
     latitude: 11.4,
-    img_url: "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/d104c760090689.5a3b6009c36bd.jpg"
+    img_url: "https://img.posterlounge.de/img/products/640000/630477/630477_poster_l.jpg"
   },
 
   {
