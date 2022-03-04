@@ -1,11 +1,14 @@
 <div class="categories-container container  d-flex justify-content-center flex-wrap">
   <ul class= "d-flex justify-content-center my-3 container ">
-    <% @categories.each do |cat| %>
-      <li class= "category-item">
-        <button >
-          <i class='<%= cat %>'></i>
-        </li>
-      </button>
+      <% @categories.each do |cat| %>
+        <%= form_tag main_path, method: :get do %>
+          <%= hidden_field_tag :query,
+              cat
+          %>
+          <%= button_tag(type: "submit", class: "btn btn-default") do %>
+            <i class='<%= cat %>'></i>
+          <% end %>
+        <% end %>
     <% end %>
   </ul>
 </div>

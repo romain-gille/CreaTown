@@ -1,7 +1,8 @@
 <div class="container sticky_footer">
   <%= render "layouts/categories" %>
   <% if @events.empty? %>
-    <h2 class="text-center my-3">You have no Events yet</h2>
+    <h2 class="text-center my-3">Sorry, there are no Events yet</h2>
+   <%= link_to "Add an Event", root_path, class: "nav-link " %>
   <% else %>
     <div class="horizontal-scroll">
       <% @events.each do |event| %>
@@ -10,7 +11,7 @@
     </div>
   <% end %>
   <% if @creations.empty? %>
-    <h2 class="text-center my-3">You have no Creations yet</h2>
+    <h2 class="text-center my-3">Sorry, there are no Creations yet</h2>
   <% else %>
     <div class="horizontal-scroll">
       <% @creations.each do |creation| %>
