@@ -1,8 +1,9 @@
+<%= render "layouts/categories" %>
 <div class="container sticky_footer">
-  <%= render "layouts/categories" %>
+  <h2 class="pt-4 pb-1">Events</h2>
   <% if @events.empty? %>
     <h2 class="text-center my-3">Sorry, there are no Events yet</h2>
-   <%= link_to "Add an Event", root_path, class: "nav-link " %>
+    <%= link_to "Add an Event", root_path, class: "nav-link " %>
   <% else %>
     <div class="main-event-card">
       <div class="horizontal-scroll">
@@ -11,6 +12,7 @@
         <% end %>
       </div>
     <% end %>
+    <h2 class="pt-4 pb-1">Creations</h2>
     <% if @creations.empty? %>
       <h2 class="text-center my-3">You have no Creations yet</h2>
     <% else %>

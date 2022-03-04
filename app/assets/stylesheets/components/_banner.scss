@@ -1,11 +1,14 @@
 .home-banner {
-  background-image: linear-gradient(rgba(17, 93, 255, 0.2), rgba(17, 93, 255, 0.8)),
+  background-image: linear-gradient(
+      rgba(17, 93, 255, 0.2),
+      rgba(17, 93, 255, 0.8)
+    ),
     url("undraw_Making_art_re_ee8w.png");
   background-position: center;
   background-size: cover;
   color: white;
 }
 
-.sticky_footer-banner {
+.sticky-footer-banner {
   min-height: calc(100vh - 56px);
 }
