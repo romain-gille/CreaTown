@@ -11,5 +11,7 @@
       <h4><%= creation.name %></h4>
     </div>
   <% end %>
-  <%= render partial: "partials/like", locals: {my_creation: creation, my_like: current_user.liked_creations.include?(creation) ? current_user.likes.find {|lik| lik.creation == creation} : Like.new} %>
+  <div class = "button-container">
+    <%= render partial: "partials/like", locals: {my_creation: creation, my_like: current_user.liked_creations.include?(creation) ? current_user.likes.find {|lik| lik.creation == creation} : Like.new} %>
+  </div>
 </div>
