@@ -246,7 +246,7 @@ events_data = [
 puts "Creating events!"
 
 events_data.each do |data|
-  event = Event.new(user: data[:user], location: data[:location], date: data[:date], description: data[:description],
+  event = Event.new(user: data[:user],title: data[:title], location: data[:location], date: data[:date], description: data[:description],
                     longitude: data[:longitude], latitude: data[:latitude])
   file = URI.open(data[:img_url])
   event.photo.attach(io: file, filename: "event.jpg", content_type: "image/jpg")

@@ -1,11 +1,11 @@
 <div class="container sticky_footer">
-  <h1><%= @event.date %></h1>
-  <h2><%= @event.location %></h2>
+  <h1 class= "py-2"><%= @event.title %></h1>
+  <h4><i class="fas fa-map-marker-alt"></i> <%= @event.location %></h4>
   <div class="row">
-    <div class="col-12 col-lg-8 border showpage-image-container">
-      <img src="<%= @event.photo.url %>">
+    <div class="col-12 col-lg-8 showpage-image-container py-4">
+      <img src="<%= @event.photo.url %>" class="rounded ">
     </div>
-    <div class="col-12 col-lg-4 border">
+    <div class="col-12 col-lg-4 ">
       <h2>About this event</h2>
       <p><%= @event.description %></p>
     </div>
