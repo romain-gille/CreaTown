@@ -1,9 +1,10 @@
 <div class="card horizontal-scroll__item no-width-card main-event-card" style="background-image: linear-gradient(rgba(17, 93, 255, 0), rgba(17, 93, 255, 0.6)), url(<%= event.photo.attached? ? event.photo.url : "https://h8b6e4y4.stackpathcdn.com/wp-content/uploads/2018/02/Street-Art-Hero.jpg" %>); background-position: center; background-size: cover">
-  <%= link_to event_path(event) do %>
-    <div class="card-body card-body-container d-flex flex-column justify-content-end">
-      <%= render partial: "partials/participation", locals: {my_event: event, my_participation: current_user.attended_events.include?(event) ? current_user.participations.find {|part| part.event == event} : Participation.new} %>
+  <div class="card-body card-body-container d-flex flex-column justify-content-end">
+    <%= render partial: "partials/participation", locals: {my_event: event, my_participation: current_user.attended_events.include?(event) ? current_user.participations.find {|part| part.event == event} : Participation.new} %>
+    <%= link_to event_path(event) do %>
+      <h2 class="text-center"><%= event.title %></h2>
       <h4><%= event.date %></h4>
-      <h6><%= event.location %></h6>
-    </div>
-  <% end %>
+      <h6><%#= event.location %></h6>
+    <% end %>
+  </div>
 </div>

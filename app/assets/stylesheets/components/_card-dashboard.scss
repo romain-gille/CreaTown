@@ -43,13 +43,23 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  h4 {
+    font-size: 1rem;
+  }
+  .fa-user {
+    color: white;
+  }
+  .likes-and-participations {
+    color: white;
+  }
 }
 
 .card-body {
   height: 100%;
   * {
     color: white;
-
+  }
+}
 @media (max-width: 1600px) {
   .card-container-dashboard {
     grid-template-columns: 1fr 1fr 1fr;

@@ -22,7 +22,7 @@
 .categories-container {
   padding: 0;
   background-color: $our_orange;
-  height: 15vh;
+  height: 70px;
   ul {
     padding: 0;
   }
@@ -30,7 +30,7 @@
 
 .horizontal-scroll {
   display: flex;
-  gap: 5px;
+  gap: 25px;
   height: 320px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
