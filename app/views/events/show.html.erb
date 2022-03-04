@@ -9,7 +9,7 @@
       <h2>About this event</h2>
       <h5><i class="fas fa-calendar-check"> <%= @event.date %></i></h5>
       <p><%= @event.description %></p>
-      <%= render partial: "partials/participation", locals: {my_event: @event, my_participation: current_user.attended_events.include?(@event) ? current_user.participations.find {|part| part.event == event} : Participation.new} %>
+      <%= render partial: "partials/participation", locals: {my_event: @event, my_participation: current_user.attended_events.include?(@event) ? current_user.participations.find {|part| part.event == @event} : Participation.new} %>
     </div>
   </div>
 </div>
