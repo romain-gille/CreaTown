@@ -1,10 +1,10 @@
 .footer {
-  background: #ffb85c;
+  background: $our_orange;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  // height: 50px;
-  padding: 0px 50px;
+  height: 80px;
+  padding: 0px 25px;
   color: rgba(0, 0, 0, 0.3);
 }
 .footer-links {
@@ -25,6 +25,9 @@
   color: #d23333;
 }
 
-.quotation-mark {
-  font-size: 12px;
+.footer-links h6 {
+  font-family: Merriweather;
+  font-size: 1.5vh;
+  margin-top: 10px;
+  color: white;
 }
