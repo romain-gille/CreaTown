@@ -21,6 +21,8 @@
 }
 .categories-container {
   padding: 0;
+  background-color: $our_orange;
+  height: 15vh;
   ul {
     padding: 0;
   }
@@ -42,7 +44,6 @@
     align-items: center;
     background-color: white;
     color: white;
-    border: 1px solid black;
     display: flex;
     flex: 0 0 320px;
     font-size: 40px;
@@ -59,4 +60,8 @@
 a {
   text-decoration: none;
   color: $our_orange;
+}
+
+.main-event-card {
+  // margin: -40px;
 }
