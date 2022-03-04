@@ -12,7 +12,7 @@
   <% if @creations.empty? %>
     <h2 class="text-center my-3">You have no Creations yet</h2>
   <% else %>
-    <div class="horizontal-scroll">
+    <div class="card-container-dashboard">
       <% @creations.each do |creation| %>
         <%= render :partial => 'partials/card', locals: { creation: creation, user: @user } %>
       <% end %>

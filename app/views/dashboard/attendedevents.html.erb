@@ -4,7 +4,7 @@
     <% if @events_attended.empty? %>
       <h2 class="text-center my-3">You have no events to attend</h2>
     <% else %>
-      <div  class="card-container">
+      <div  class="horizontal-scroll">
         <% @events_attended.each do |event| %>
           <%= render :partial => 'partials/event_card', locals: { event: event, user: @user } %>
         <% end %>
