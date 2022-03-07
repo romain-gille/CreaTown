@@ -13,7 +13,10 @@ class PagesController < ApplicationController
       @creations = Creation.all
     end
     @events = Event.all
+  end
 
+  def map
+    @events = Event.all
     @markers = @events.map do |event|
       {
         lat: event.latitude,
@@ -21,10 +24,5 @@ class PagesController < ApplicationController
         info_window: render_to_string(partial: "partials/info-window", locals: { event: event })
       }
     end
-  end
-
-  respond_to do |format|
-    format.html { redirect_to main_path }
-    format.text { render partial: 'partials/events-main', locals: { events: @events }, formats: [:html] }
   end
 end

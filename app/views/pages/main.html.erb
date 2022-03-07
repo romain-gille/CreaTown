@@ -1,8 +1,8 @@
 <%= render "layouts/categories" %>
-<div class="container sticky_footer py-3" data-controller="mainmap">
+<div class="container sticky_footer py-3">
   <div class="d-flex justify-content-between pb-1 pt-2">
     <h2 >Events</h2>
-    <%= link_to raw('<i class="fas fa-map"></i>'), main_path, {class:"btn btn-primary", data: {mainmap_target: "mapbutton",action: "click->mainmap#toggleview"}} %>
+    <%= link_to raw('<i class="fas fa-map"></i>'), map_path, {class:"btn btn-primary"} %>
   </div>
   <%= render :partial => 'partials/events-main', locals: { events: @events } %>
   <h2 class="pt-4 pb-1">Creations</h2>
