@@ -1,9 +1,40 @@
+.mapboxgl-ctrl-geocoder {
+  position: relative;
+  max-width: none;
+  width: 100%;
+  border: 1px solid lightgrey;
+  box-shadow: none;
+}
+
 .mapboxgl-popup {
   max-width: 200px;
 }
 
 .mapboxgl-popup-content {
   text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+.mapboxgl-ctrl-geocoder--icon-search{
+  position: absolute;
+  z-index: 1;
+  left: 0;
+}
+
+.mapboxgl-ctrl-geocoder--input{
+  padding: 5px 20px;
+  width: 100%;
+}
+
+.mapboxgl-ctrl-geocoder--button{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.suggestions{
+  list-style:none
+
   // font-family: "Open Sans", sans-serif;
 }
 
