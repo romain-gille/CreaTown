@@ -45,7 +45,7 @@
 
 .card-body-container {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
   h4 {
     font-size: 1rem;
@@ -59,9 +59,40 @@
 }
 
 .card-body {
+  padding: 0;
   height: 100%;
   * {
     color: white;
+  }
+  h2 {
+    font-size: 1.1rem;
+  }
+  .fa-user {
+    font-size: 1rem;
+  }
+  .likes-and-participations {
+    font-size: 0.8rem;
+  }
+  .date-event {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ffb85c;
+    font-size: 0.8rem;
+    color: #cc7400;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-radius: 10px;
+  }
+  .category-event {
+    font-size: 1rem;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 5px;
+    background-color: #ffb85c;
+    color: #cc7400;
+    padding: 0.4rem;
   }
 }
 @media (max-width: 1600px) {
