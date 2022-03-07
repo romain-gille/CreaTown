@@ -7,7 +7,7 @@
   <%= render :partial => 'partials/events-main', locals: { events: @events } %>
   <div class="d-flex justify-content-between">
     <h2 class="pt-4 pb-1">Creations</h2>
-    <h2 class="pt-4 pb-1"><%= @filter.capitalize %></h2>
+    <h2 class="pt-4 pb-1"><%= @filter %></h2>
   </div>
   <% if @creations.empty? %>
     <h2 class="text-center my-3">Sorry, there are no Creations yet</h2>
