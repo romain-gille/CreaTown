@@ -8,10 +8,10 @@
 puts "Cleaning seeds, destroying all users, events, creations..."
 User.destroy_all
 Event.destroy_all
-# Participation.destroy_all
+Participation.destroy_all
 Creation.destroy_all
-# Like.destroy_all
-# EventCreation.destroy_all
+Like.destroy_all
+EventCreation.destroy_all
 
 user_data = [
   {
@@ -89,7 +89,8 @@ creation_data = [
     category: "art",
     date: Date.new(2022, 2, 22),
     user: users["jul"],
-    img_url: "https://images.squarespace-cdn.com/content/v1/60d1b5efecf0e13e48e9fbc7/efecbbc3-bc09-4709-b0f7-c54892a533da/IMG_2894%5B1%5D.jpg?format=500w"
+    img_url: "https://images.squarespace-cdn.com/content/v1/60d1b5efecf0e13e48e9fbc7/efecbbc3-bc09-4709-b0f7-c54892a533da/IMG_2894%5B1%5D.jpg?format=500w",
+    slug: "jul1"
   },
 
   {
@@ -98,7 +99,8 @@ creation_data = [
     category: "art",
     date: Date.new(2022, 2, 22),
     user: users["jul"],
-    img_url: "https://images.squarespace-cdn.com/content/v1/60d1b5efecf0e13e48e9fbc7/ccfee1da-f4f6-4cb2-97f7-1de8007cc32d/marilyn-shoe.jpg?format=500w"
+    img_url: "https://images.squarespace-cdn.com/content/v1/60d1b5efecf0e13e48e9fbc7/ccfee1da-f4f6-4cb2-97f7-1de8007cc32d/marilyn-shoe.jpg?format=500w",
+    slug: "jul2"
   },
 
   {
@@ -107,7 +109,8 @@ creation_data = [
     category: "art",
     date: Date.new(2022, 2, 22),
     user: users["jul"],
-    img_url: "https://images.squarespace-cdn.com/content/v1/60d1b5efecf0e13e48e9fbc7/81d25535-0c17-4c76-b1e5-e6e0f3651075/IMG_3001.jpg?format=500w"
+    img_url: "https://images.squarespace-cdn.com/content/v1/60d1b5efecf0e13e48e9fbc7/81d25535-0c17-4c76-b1e5-e6e0f3651075/IMG_3001.jpg?format=500w",
+    slug: "jul3"
   },
 
   {
@@ -116,7 +119,8 @@ creation_data = [
     category: "cooking",
     date: Date.new(2022, 2, 28),
     user: users["hir"],
-    img_url: "https://assets.bonappetit.com/photos/6018902c21494f6f6d02df84/1:1/w_2240,c_limit/Spices-Udon-in-Buttery-Tomato-and-Soy-Broth.jpg"
+    img_url: "https://assets.bonappetit.com/photos/6018902c21494f6f6d02df84/1:1/w_2240,c_limit/Spices-Udon-in-Buttery-Tomato-and-Soy-Broth.jpg",
+    slug: "hir1"
   },
 
   {
@@ -125,7 +129,8 @@ creation_data = [
     category: "cooking",
     date: Date.new(2022, 3, 1),
     user: users["hir"],
-    img_url: "https://assets.bonappetit.com/photos/58bd9e060109e601f57e3696/1:1/w_2240,c_limit/Naomi%20Recipe_02232017%20HEALTHYISH5314.jpg"
+    img_url: "https://assets.bonappetit.com/photos/58bd9e060109e601f57e3696/1:1/w_2240,c_limit/Naomi%20Recipe_02232017%20HEALTHYISH5314.jpg",
+    slug: "hir2"
   },
 
   {
@@ -134,7 +139,8 @@ creation_data = [
     category: "photography",
     date: Date.new(2021, 12, 7),
     user: users["jam"],
-    img_url: "https://images.unsplash.com/photo-1520539852163-cbe5251b4f1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=707&q=80"
+    img_url: "https://images.unsplash.com/photo-1520539852163-cbe5251b4f1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=707&q=80",
+    slug: "jam1"
   },
 
   {
@@ -143,7 +149,8 @@ creation_data = [
     category: "photography",
     date: Date.new(2021, 12, 7),
     user: users["jam"],
-    img_url: "https://images.unsplash.com/photo-1603739315857-8fc7017955ae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+    img_url: "https://images.unsplash.com/photo-1603739315857-8fc7017955ae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    slug: "jam2"
   },
 
   {
@@ -152,7 +159,8 @@ creation_data = [
     category: "collections",
     date: Date.new(2021, 11, 7),
     user: users["raj"],
-    img_url: "https://images.unsplash.com/photo-1620928572438-075c466c48da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+    img_url: "https://images.unsplash.com/photo-1620928572438-075c466c48da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+    slug: "raj1"
   },
 
   {
@@ -161,7 +169,8 @@ creation_data = [
     category: "garden",
     date: Date.new(2021, 12, 7),
     user: users["rit"],
-    img_url: "https://i.pinimg.com/474x/90/3b/fb/903bfb247c92c3ca5246edd112830a2e.jpg"
+    img_url: "https://i.pinimg.com/474x/90/3b/fb/903bfb247c92c3ca5246edd112830a2e.jpg",
+    slug: "rit1"
   },
 
   {
@@ -170,7 +179,8 @@ creation_data = [
     category: "garden",
     date: Date.new(2021, 12, 7),
     user: users["rit"],
-    img_url: "https://i.pinimg.com/564x/c1/50/44/c15044236283252af6e584ea8ac0a95d.jpg"
+    img_url: "https://i.pinimg.com/564x/c1/50/44/c15044236283252af6e584ea8ac0a95d.jpg",
+    slug: "rit2"
   }
 ]
 #go through each creation_data and create creation object
@@ -204,6 +214,7 @@ events_data = [
     location: "Munich, Giesinger Bräu",
     date: Date.new(2022, 3, 18),
     description: "The world from above - exibition of aerial photography",
+    slug: "event2",
     longitude: 11.577060,
     latitude: 48.117440,
     img_url: "https://images.unsplash.com/photo-1520539852163-cbe5251b4f1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=707&q=80"
@@ -215,6 +226,7 @@ events_data = [
     location: "Munich, Glockenbachwerkstatt",
     date: Date.new(2022, 1, 22),
     description: "Japanese home cooking with Hiromi",
+    slug: "event3",
     longitude: 11.570520,
     latitude: 48.125540,
     img_url: "https://d1oh9y2nmj4y5b.cloudfront.net/uploads/photo/filename/5468/RIMG4965.jpg"
@@ -226,6 +238,7 @@ events_data = [
     location: "Munich, maxvorstadt",
     date: Date.new(2022, 1, 24),
     description: "Better than comicon: Raj's comic book collection. Trade your comics, rent a cosplayer and much more.",
+    slug: "event4",
     longitude: 11.568050,
     latitude: 48.147629,
     img_url: "https://1yfd8w35xqq41q3ou63czp8h-wpengine.netdna-ssl.com/wp-content/uploads/2017/01/The-Future-of-Exhibition-Is-Here-The-Comic-Book-Convention.jpg"
@@ -237,6 +250,7 @@ events_data = [
     location: "Munich, Gemeindehaus St. Johann",
     date: Date.new(2022, 3, 22),
     description: "Gardening with Rita: what kinds of tropical plants are easy to grow in your own home.",
+    slug: "event5",
     longitude: 11.563050,
     latitude: 48.149629,
     img_url: "https://www.collinsdictionary.com/images/full/gardening_380327731_1000.jpg"
@@ -252,5 +266,16 @@ events_data.each do |data|
   event.photo.attach(io: file, filename: "event.jpg", content_type: "image/jpg")
   event.save!
 end
-puts "And finally creating participations!"
+puts "Creating participations!"
 Participation.create(user: User.all.first, event: Event.all.first)
+
+# puts "And finally creating Creation-Event links!"
+# EventCreation.create!(event: events_data["event1"], creation: creation_data["jul1"])
+# EventCreation.create!(event: events_data["event1"], creation: creation_data["jul2"])
+# EventCreation.create!(event: events_data["event1"], creation: creation_data["jul3"])
+# EventCreation.create!(event: events_data["event3"], creation: creation_data["hir1"])
+# EventCreation.create!(event: events_data["event3"], creation: creation_data["hir2"])
+# EventCreation.create!(event: events_data["event2"], creation: creation_data["jam1"])
+# EventCreation.create!(event: events_data["event2"], creation: creation_data["jam2"])
+# EventCreation.create!(event: events_data["event4"], creation: creation_data["raj1"])
+# EventCreation.create!(event: events_data["event5"], creation: creation_data["rit1"])
