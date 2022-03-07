@@ -1,4 +1,4 @@
-<div class="card ">
+<div class="card">
   <%= link_to creation_path(creation) do %>
     <div class = "card-img-top">
       <% if creation.photos.attached? %>
@@ -7,11 +7,17 @@
         <img src="https://h8b6e4y4.stackpathcdn.com/wp-content/uploads/2018/02/Street-Art-Hero.jpg" alt="">
       <% end %>
     </div>
-    <div class=" card-body-container">
+    <div class="card-body-container">
       <h4 class="py-2"><%= creation.name %></h4>
     </div>
   <% end %>
-  <div class = "button-container">
-    <%= render partial: "partials/like", locals: {my_creation: creation, my_like: current_user.liked_creations.include?(creation) ? current_user.likes.find {|lik| lik.creation == creation} : Like.new} %>
+
+  <div class = "button-container flexbox">
+    <div class="likes-container">
+      <%= render partial: "partials/like", locals: {my_creation: creation, my_like: current_user.liked_creations.include?(creation) ? current_user.likes.find {|lik| lik.creation == creation} : Like.new} %>
+    </div>
+    <div class="categ-container">
+      <i class="<%= @categories[@cat_name.index(creation.category)]%> category"></i>
+    </div>
   </div>
 </div>

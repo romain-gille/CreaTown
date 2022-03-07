@@ -1,14 +1,15 @@
-<div class="categories-container container-fluid d-flex justify-content-center flex-wrap">
-  <ul class= "d-flex justify-content-center my-3 container ">
-    <% @categories.each do |cat| %>
+<div class="categories-container container-fluid d-flex flex-nowrap horizontal-scroll-cat pt-3">
+  <% @categories.each do |cat| %>
+    <div class= "category-card ">
       <%= form_tag main_path, method: :get do %>
         <%= hidden_field_tag :query,
               cat
           %>
-        <%= button_tag(type: "submit", class: "btn btn-lg") do %>
-          <i class='<%= cat %>'></i>
+        <%= button_tag(type: "submit", class: "btn  d-flex") do %>
+          <i class='<%= cat %> category-button me-2'></i>
+          <p><strong>Cattest</strong> </p>
         <% end %>
       <% end %>
-    <% end %>
-  </ul>
+    </div>
+  <% end %>
 </div>
