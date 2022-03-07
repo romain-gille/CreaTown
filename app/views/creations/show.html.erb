@@ -2,13 +2,12 @@
   <h1 class= "py-2"><%= @creation.name %></h1>
   <div class="row">
     <div class="col-12 col-lg-8 showpage-image-container py-2">
-      <img src="<%= @creation.photos.first.url %>" class="rounded ">
+      <img src="<%= @creation.photos.first.url %>" class="rounded">
     </div>
     <div class="col-12 col-lg-4 ">
       <h5>Description</h5>
       <p><%= @creation.description %></p>
       <h5>Category</h5>
-      <%# <p><%= @creation.category %>
       <i class="<%= @categories[@cat_name.index(@creation.category)]%> category"></i>
       <p>Created on <%= @creation.date.strftime("%b %d, %Y") %></p>
       <%= render partial: "partials/like", locals: {my_creation: @creation, my_like: @like} %>

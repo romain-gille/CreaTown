@@ -1,0 +1,9 @@
+<div class="main-event-card">
+  <div class="horizontal-scroll">
+    <% event.creations.each do |creation| %>
+      <%= link_to creation_path(creation) do %>
+        <%= cl_image_tag(creation.photos.first.key) %>
+      <% end %>
+    <% end %>
+  </div>
+</div>

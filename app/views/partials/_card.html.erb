@@ -12,7 +12,7 @@
     </div>
   <% end %>
 
-  <div class = "button-container flexbox">
+  <div class = "button-container">
     <div class="likes-container">
       <%= render partial: "partials/like", locals: {my_creation: creation, my_like: current_user.liked_creations.include?(creation) ? current_user.likes.find {|lik| lik.creation == creation} : Like.new} %>
     </div>
