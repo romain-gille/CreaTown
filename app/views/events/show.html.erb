@@ -11,6 +11,13 @@
       <p><%= @event.description %></p>
       <%= render partial: "partials/participation", locals: {my_event: @event, my_participation: current_user.attended_events.include?(@event) ? current_user.participations.find {|part| part.event == @event} : Participation.new} %>
     </div>
+    <div class="col-12 col-lg-8 showpage-image-container py-4">
+      <% @event.creations.each do |creation| %>
+        <%= link_to creation_path(creation) do %>
+          <%= cl_image_tag(creation.photos.first.key) %>
+        <% end %>
+      <% end %>
+    </div>
   </div>
   <div style="width: 100%; height: 300px;"
   data-controller="mapbox"

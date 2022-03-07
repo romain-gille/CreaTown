@@ -8,7 +8,8 @@
       <h5>Description</h5>
       <p><%= @creation.description %></p>
       <h5>Category</h5>
-      <p><%= @creation.category %></p>
+      <%# <p><%= @creation.category %>
+      <i class="<%= @categories[@cat_name.index(@creation.category)]%> category"></i>
       <p>Created on <%= @creation.date.strftime("%b %d, %Y") %></p>
       <%= render partial: "partials/like", locals: {my_creation: @creation, my_like: @like} %>
     </div>
