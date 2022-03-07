@@ -1,0 +1,31 @@
+.category-card {
+  width: 200px;
+  height: 50px;
+  background-color: #f5f3fc;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba($color: #000000, $alpha: 0.15);
+  padding-left: 0px !important;
+
+  .category-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #adb7ff;
+    border-radius: 4px;
+    width: 42px;
+    text-align: center;
+    color: #475dff;
+  }
+}
+
+.horizontal-scroll-cat {
+  display: flex;
+  gap: 10px;
+
+  overflow-x: auto;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

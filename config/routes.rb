@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   get "/main", to: "pages#main"
+  get "/map", to: "pages#map"
   resources :events, only: [:show, :new, :create] do
     resources :participations, only: [:create]
   end

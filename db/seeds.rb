@@ -193,8 +193,8 @@ events_data = [
     date: Date.new(2022, 3, 22),
     description: "Pop-Up Art Show at RaumEinsAtelier, Schwabing",
     slug: "event1",
-    longitude: 48.15,
-    latitude: 11.4,
+    longitude: 11.570380,
+    latitude: 48.167450,
     img_url: "https://img.posterlounge.de/img/products/640000/630477/630477_poster_l.jpg"
   },
 
@@ -204,8 +204,8 @@ events_data = [
     location: "Munich, Giesinger Bräu",
     date: Date.new(2022, 3, 18),
     description: "The world from above - exibition of aerial photography",
-    longitude: 48.15,
-    latitude: 11.4,
+    longitude: 11.577060,
+    latitude: 48.117440,
     img_url: "https://images.unsplash.com/photo-1520539852163-cbe5251b4f1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=707&q=80"
   },
 
@@ -215,19 +215,19 @@ events_data = [
     location: "Munich, Glockenbachwerkstatt",
     date: Date.new(2022, 1, 22),
     description: "Japanese home cooking with Hiromi",
-    longitude: 48.15,
-    latitude: 11.4,
+    longitude: 11.570520,
+    latitude: 48.125540,
     img_url: "https://d1oh9y2nmj4y5b.cloudfront.net/uploads/photo/filename/5468/RIMG4965.jpg"
   },
 
   {
     user: users["raj"],
     title: "Cosplay Time",
-    location: "Munich",
+    location: "Munich, maxvorstadt",
     date: Date.new(2022, 1, 24),
     description: "Better than comicon: Raj's comic book collection. Trade your comics, rent a cosplayer and much more.",
-    longitude: 48.15,
-    latitude: 11.4,
+    longitude: 11.568050,
+    latitude: 48.147629,
     img_url: "https://1yfd8w35xqq41q3ou63czp8h-wpengine.netdna-ssl.com/wp-content/uploads/2017/01/The-Future-of-Exhibition-Is-Here-The-Comic-Book-Convention.jpg"
   },
 
@@ -237,8 +237,8 @@ events_data = [
     location: "Munich, Gemeindehaus St. Johann",
     date: Date.new(2022, 3, 22),
     description: "Gardening with Rita: what kinds of tropical plants are easy to grow in your own home.",
-    longitude: 48.15,
-    latitude: 11.4,
+    longitude: 11.563050,
+    latitude: 48.149629,
     img_url: "https://www.collinsdictionary.com/images/full/gardening_380327731_1000.jpg"
   }
 ]
