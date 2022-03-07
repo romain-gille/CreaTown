@@ -1,0 +1,14 @@
+<div data-mainmap-target= "content" >
+  <% if events.empty? %>
+    <h2 class="text-center my-3">Sorry, there are no Events yet</h2>
+    <%= link_to "Add an Event", root_path, class: "nav-link " %>
+  <% else %>
+    <div class="main-event-card">
+      <div class="horizontal-scroll">
+        <% events.each do |event| %>
+          <%= render :partial => "partials/event_card", locals: { event: event, user: @user } %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>

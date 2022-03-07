@@ -22,12 +22,9 @@ class PagesController < ApplicationController
       }
     end
   end
-end
 
-# Art
-# Collection
-# Cooking
-# Cinematography
-# Technology (electric toy car, engineering projects, crazy scientific stuff)
-# Garden
-# Miscellaneous
+  respond_to do |format|
+    format.html { redirect_to main_path }
+    format.text { render partial: 'partials/events-main', locals: { events: @events }, formats: [:html] }
+  end
+end

@@ -9,5 +9,18 @@ export default class extends Controller {
     console.log(this.contentTarget);
   }
 
-  toggleview() {}
+  toggleview(event) {
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    const url = this.mapbuttonTarget.action;
+    fetch("/main", {
+      method: "get",
+      headers: { Accept: "text/plain" },
+    })
+      .then((response) => response.text())
+      .then((data) => {
+        console.log(data);
+        this.contentTarget.outerHTML = data;
+      });
+  }
 }

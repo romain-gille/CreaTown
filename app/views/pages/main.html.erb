@@ -2,33 +2,18 @@
 <div class="container sticky_footer py-3" data-controller="mainmap">
   <div class="d-flex justify-content-between pb-1 pt-2">
     <h2 >Events</h2>
-    <button class="btn btn-primary" data-mainmap-target= "mapbutton" data-action= "click->mainmap#toggleview"><i class="fas fa-map"></i></button>
+    <%= link_to raw('<i class="fas fa-map"></i>'), main_path, {class:"btn btn-primary", data: {mainmap_target: "mapbutton",action: "click->mainmap#toggleview"}} %>
   </div>
-  <div data-mainmap-target= "content" ></div>
-  <% if @events.empty? %>
-    <h2 class="text-center my-3">Sorry, there are no Events yet</h2>
-    <%= link_to "Add an Event", root_path, class: "nav-link " %>
+  <%= render :partial => 'partials/events-main', locals: { events: @events } %>
+  <h2 class="pt-4 pb-1">Creations</h2>
+  <% if @creations.empty? %>
+    <h2 class="text-center my-3">Sorry, there are no Creations yet</h2>
   <% else %>
-    <div class="main-event-card">
-      <div class="horizontal-scroll">
-        <% @events.each do |event| %>
-          <%= render :partial => "partials/event_card", locals: { event: event, user: @user } %>
-        <% end %>
-      </div>
-    <% end %>
-    <h2 class="pt-4 pb-1">Creations</h2>
-    <% if @creations.empty? %>
-      <h2 class="text-center my-3">Sorry, there are no Creations yet</h2>
-    <% else %>
-      <div class="card-container-dashboard">
-        <% @creations.each do |creation| %>
-          <%= render :partial => 'partials/card', locals: { creation: creation, user: @user } %>
-        <% end %>
-      </div>
-    <% end %>
-    <div style="width: 100%; height: 300px;"
-  data-controller="mapbox"
-  data-mapbox-markers-value="<%= @markers.to_json %>"
-  data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-  </div>
+    <div class="card-container-dashboard">
+      <% @creations.each do |creation| %>
+        <%= render :partial => 'partials/card', locals: { creation: creation, user: @user } %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
 </div>
