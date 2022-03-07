@@ -3,7 +3,6 @@ class PagesController < ApplicationController
   end
 
   def main
-
     @categories = ["fas fa-paint-brush", "fas fa-utensils", "fas fa-camera-retro",
                    "fas fa-stream", "fas fa-seedling"]
     @cat_name = ["art", "cooking", "photography", "collections", "garden"]
