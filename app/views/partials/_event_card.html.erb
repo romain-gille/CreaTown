@@ -4,7 +4,8 @@
     <%= link_to event_path(event) do %>
       <h2 class="text-center"><%= event.title %></h2>
       <h4><%= event.date %></h4>
-      <h6><%#= event.location %></h6>
+      <i class="<%#= @categories[@cat_name.index(event.category)]%>"></i>
+      <%#= event.location %>
     <% end %>
   </div>
 </div>

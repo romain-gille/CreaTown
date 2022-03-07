@@ -3,9 +3,10 @@ class PagesController < ApplicationController
   end
 
   def main
-    @categories = ["fab fa-canadian-maple-leaf", "fas fa-palette", "fas fa-cookie-bite", "fas fa-film",
-      "fas fa-microchip", "fas fa-feather-alt", "fas fa-bars"]
-    cat_name = ["art", "collections", "cooking", "photography", "technology", "garden", "misc"]
+    @categories = ["fas fa-paint-brush", "fas fa-utensils", "fas fa-camera-retro",
+                   "fas fa-stream", "fas fa-seedling"]
+    @cat_name = ["art", "cooking", "photography", "collections", "garden"]
+
     if params[:query].present?
       index = @categories.index(params[:query])
       @creations = Creation.where(category: cat_name[index])
@@ -18,9 +19,7 @@ class PagesController < ApplicationController
 end
 
 # Art
-# Collection
 # Cooking
-# Cinematography
-# Technology (electric toy car, engineering projects, crazy scientific stuff)
-# Garden
-# Miscellaneous
+# Photography
+# Collections
+# Gardening

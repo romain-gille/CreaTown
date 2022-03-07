@@ -1,12 +1,16 @@
 class EventsController < ApplicationController
   def new
     @event = Event.new
+    @creations = current_user.creations
   end
 
   def create
     @event = Event.new(strong_params)
     @event.user = current_user
     if @event.save
+      params[:event][:creations].each do |creation_id|
+        EventCreation.create(creation_id: creation_id, event: @event)
+      end
       redirect_to myevents_path
     else
       render :new
