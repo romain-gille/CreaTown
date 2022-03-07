@@ -5,7 +5,10 @@
     <%= link_to raw('<i class="fas fa-map"></i>'), map_path, {class:"btn btn-primary"} %>
   </div>
   <%= render :partial => 'partials/events-main', locals: { events: @events } %>
-  <h2 class="pt-4 pb-1">Creations</h2>
+  <div class="d-flex justify-content-between">
+    <h2 class="pt-4 pb-1">Creations</h2>
+    <h2 class="pt-4 pb-1"><%= @filter.capitalize %></h2>
+  </div>
   <% if @creations.empty? %>
     <h2 class="text-center my-3">Sorry, there are no Creations yet</h2>
   <% else %>

@@ -9,6 +9,7 @@ class PagesController < ApplicationController
     if params[:query].present?
       index = @categories.index(params[:query])
       @creations = Creation.where(category: cat_name[index])
+      @filter = cat_name[index]
     else
       @creations = Creation.all
     end
