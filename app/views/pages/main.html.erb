@@ -1,18 +1,14 @@
 <%= render "layouts/categories" %>
-<div class="container sticky_footer">
-  <h2 class="pt-4 pb-1">Events</h2>
-  <% if @events.empty? %>
-    <h2 class="text-center my-3">Sorry, there are no Events yet</h2>
-    <%= link_to "Add an Event", root_path, class: "nav-link " %>
-  <% else %>
-    <div class="main-event-card">
-      <div class="horizontal-scroll">
-        <% @events.each do |event| %>
-          <%= render :partial => "partials/event_card", locals: { event: event, user: @user } %>
-        <% end %>
-      </div>
-    <% end %>
+<div class="container sticky_footer py-3">
+  <div class="d-flex justify-content-between pb-1 pt-2">
+    <h2 >Events</h2>
+    <%= link_to raw('<i class="fas fa-map"></i>'), map_path, {class:"btn btn-primary"} %>
+  </div>
+  <%= render :partial => 'partials/events-main', locals: { events: @events } %>
+  <div class="d-flex justify-content-between">
     <h2 class="pt-4 pb-1">Creations</h2>
+    <h2 class="pt-4 pb-1"><%= @filter %></h2>
+  </div>
   <% if @creations.empty? %>
     <h2 class="text-center my-3">Sorry, there are no Creations yet</h2>
   <% else %>
@@ -22,4 +18,5 @@
       <% end %>
     </div>
   <% end %>
+</div>
 </div>
