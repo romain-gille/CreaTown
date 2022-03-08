@@ -9,10 +9,13 @@
     <%= link_to raw('<i class="fab fa-sistrix"></i> Creations and Events'), main_path, class: "nav-link " %>
   </li>
   <li class="nav-item">
+    <%= link_to raw('<i class="fas fa-columns"></i> Dashboard'), mycreations_path, class: "nav-link" %>
+  </li>
+  <li class="nav-item">
     <%= link_to raw('<i class="fas fa-comment-alt"></i> Messages'), chatrooms_path, class: "nav-link " %>
   </li>
   <li class="nav-item">
-    <%= link_to "Dashboard", mycreations_path, class: "nav-link" %>
+    <%= link_to  raw('<i class="fas fa-columns"></i>Dashboard'), mycreations_path, class: "nav-link" %>
   </li>
   <li class="nav-item">
     <%= link_to  current_user.email, root_path, class: "nav-link smaller-nav-user" %>
@@ -28,7 +31,6 @@
       <i class="fas fa-user-alt"></i> <%= current_user.email %>
     </a>
     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
-      <li><%= link_to "Dashboard", mycreations_path, class: "dropdown-item" %></li>
       <li><%= link_to "Account", root_path, class: "dropdown-item" %></li>
       <li><%= link_to "Update Profile", edit_user_registration_path, class: "dropdown-item" %></li>
       <li><%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "dropdown-item" %></li>

@@ -5,4 +5,5 @@ class Creation < ApplicationRecord
   has_many :event_creations, dependent: :destroy
   has_many :events, through: :event_creations
   has_many_attached :photos
+  has_one :categories
 end

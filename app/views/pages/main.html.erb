@@ -14,7 +14,7 @@
   <% else %>
     <div class="card-container-dashboard">
       <% @creations.each do |creation| %>
-        <%= render :partial => 'partials/card', locals: { creation: creation, user: @user } %>
+        <%= render :partial => 'partials/creation-card', locals: { creation: creation, user: @user } %>
       <% end %>
     </div>
   <% end %>
