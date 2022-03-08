@@ -1,0 +1,15 @@
+<div class="sticky_footer container-flex">
+  <% @chatrooms.each do |chatroom| %>
+    <%= link_to chatroom_path(chatroom) do%>
+      <div class=" pt-3 pb-1 chatroom-link px-3">
+        <div class="d-flex justify-content-between">
+          <h3><%= chatroom.name %></h3>
+          <p><%= chatroom.messages.last.updated_at.strftime("%a, %d %b %Y") %></p>
+        </div>
+        <% if !chatroom.messages.empty? %>
+          <p><%= chatroom.messages.last.content %></p>
+        <% end %>
+      </div>
+    <% end %>
+  <% end %>
+</div>

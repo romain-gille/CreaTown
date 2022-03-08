@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_08_083239) do
+ActiveRecord::Schema.define(version: 2022_03_08_092035) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,10 @@ ActiveRecord::Schema.define(version: 2022_03_08_083239) do
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_connected_id"
+    t.bigint "user_messaged_id"
+    t.index ["user_connected_id"], name: "index_chatrooms_on_user_connected_id"
+    t.index ["user_messaged_id"], name: "index_chatrooms_on_user_messaged_id"
   end
 
   create_table "creations", force: :cascade do |t|
