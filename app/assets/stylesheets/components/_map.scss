@@ -2,10 +2,25 @@
   position: relative;
   max-width: none;
   width: 100%;
-  border: 1px solid lightgrey;
   box-shadow: none;
+  .mapboxgl-ctrl-geocoder--pin-right {
+    display: hidden;
+  }
+  &:focus {
+    .mapboxgl-ctrl-geocoder--pin-right {
+      display: block;
+    }
+  }
 }
-
+.suggestions {
+  list-style: none;
+  padding-left: 10px !important;
+  border-bottom: 1px solid rgb(163, 163, 163);
+  border-left: 1px solid rgb(163, 163, 163);
+  border-right: 1px solid rgb(163, 163, 163);
+  background-color: white;
+  cursor: pointer;
+}
 .mapboxgl-popup {
   max-width: 200px;
 }
@@ -15,27 +30,23 @@
   font-family: "Open Sans", sans-serif;
 }
 
-.mapboxgl-ctrl-geocoder--icon-search{
+.mapboxgl-ctrl-geocoder--icon-search {
   position: absolute;
   z-index: 1;
-  left: 0;
+  left: 0px;
+  top: 9px;
+  color: rgb(99, 99, 99);
 }
 
-.mapboxgl-ctrl-geocoder--input{
+.mapboxgl-ctrl-geocoder--input {
   padding: 5px 20px;
-  width: 100%;
+  @extend .form-control;
 }
 
-.mapboxgl-ctrl-geocoder--button{
+.mapboxgl-ctrl-geocoder--button {
   position: absolute;
   right: 0;
   top: 0;
-}
-
-.suggestions{
-  list-style:none
-
-  // font-family: "Open Sans", sans-serif;
 }
 
 .mapboxgl-popup-close-button {
@@ -45,4 +56,13 @@
 .return-map {
   font-size: 1.5rem;
   padding-right: 1rem;
+}
+.mapboxgl-ctrl-geocoder--button {
+  @extend .btn;
+  @extend .btn-primary;
+  height: 35px;
+  font-size: 0.7rem;
+}
+.mapboxgl-ctrl-geocoder--icon-loading {
+  height: 0px;
 }

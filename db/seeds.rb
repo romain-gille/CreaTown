@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "Cleaning seeds, destroying all users, events, creations..."
+Message.destroy_all
+Chatroom.destroy_all
 User.destroy_all
 Event.destroy_all
 Participation.destroy_all
@@ -184,12 +186,14 @@ creation_data = [
   }
 ]
 #go through each creation_data and create creation object
-
+creations = {}
 creation_data.each do |data|
   creation = Creation.new(name: data[:name], description: data[:description], category: data[:category],
                           date: data[:date], user: data[:user])
   file = URI.open(data[:img_url])
   creation.photos.attach(io: file, filename: 'creation.jpg', content_type: 'image/jpg')
+  slug = data[:slug]
+  creations[slug] = creation
   creation.save!
 end
 
@@ -256,6 +260,7 @@ events_data = [
     img_url: "https://www.collinsdictionary.com/images/full/gardening_380327731_1000.jpg"
   }
 ]
+events = {}
 
 puts "Creating events!"
 
@@ -264,18 +269,21 @@ events_data.each do |data|
                     longitude: data[:longitude], latitude: data[:latitude])
   file = URI.open(data[:img_url])
   event.photo.attach(io: file, filename: "event.jpg", content_type: "image/jpg")
+  slug = data[:slug]
+  events[slug] = event
   event.save!
+
 end
 puts "Creating participations!"
 Participation.create(user: User.all.first, event: Event.all.first)
 
-# puts "And finally creating Creation-Event links!"
-# EventCreation.create!(event: events_data["event1"], creation: creation_data["jul1"])
-# EventCreation.create!(event: events_data["event1"], creation: creation_data["jul2"])
-# EventCreation.create!(event: events_data["event1"], creation: creation_data["jul3"])
-# EventCreation.create!(event: events_data["event3"], creation: creation_data["hir1"])
-# EventCreation.create!(event: events_data["event3"], creation: creation_data["hir2"])
-# EventCreation.create!(event: events_data["event2"], creation: creation_data["jam1"])
-# EventCreation.create!(event: events_data["event2"], creation: creation_data["jam2"])
-# EventCreation.create!(event: events_data["event4"], creation: creation_data["raj1"])
-# EventCreation.create!(event: events_data["event5"], creation: creation_data["rit1"])
+puts "And finally creating Creation-Event links!"
+EventCreation.create!(event: events["event1"], creation: creations["jul1"])
+EventCreation.create!(event: events["event1"], creation: creations["jul2"])
+EventCreation.create!(event: events["event1"], creation: creations["jul3"])
+EventCreation.create!(event: events["event3"], creation: creations["hir1"])
+EventCreation.create!(event: events["event3"], creation: creations["hir2"])
+EventCreation.create!(event: events["event2"], creation: creations["jam1"])
+EventCreation.create!(event: events["event2"], creation: creations["jam2"])
+EventCreation.create!(event: events["event4"], creation: creations["raj1"])
+EventCreation.create!(event: events["event5"], creation: creations["rit1"])
