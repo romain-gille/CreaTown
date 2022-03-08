@@ -6,7 +6,7 @@
   <%= f.input :date, as: :date, html5: true %>
   <%= f.input :description %>
   <%= f.input :photo, as: :file %>
-  <% collection = current_user.creations.map { |creation| [creation.id, cl_image_tag(creation.photos.first.key) ] }%>
+  <% collection = current_user.creations.map { |creation| [creation.id, cl_image_tag(creation.photos.first.key, class: "creation-image" ) ] } %>
   <%= f.input :creations, label: false, as: :check_boxes, collection: collection, label_method: :second, value_method: :first, include_hidden: false, input_html: { multiple: true, required: false } %>
   <%= f.submit class: "btn btn-custom" %>
 <% end %>
