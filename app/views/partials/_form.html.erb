@@ -1,11 +1,14 @@
-<%= simple_form_for(creation) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :category, as: :radio_buttons,
+<div class="sticky_footer container">
+  <h2>Add Creation</h2>
+  <%= simple_form_for(creation) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :category, as: :radio_buttons,
                   collection: ["art", "cooking", "photography", "collections", "garden"],
                   input_html: { class: "tag-selector" },
                   item_wrapper_class: 'tag-item' %>
-  <%= f.input :description %>
-  <%= f.input :date, as: :date, html5: true %>
-  <%= f.input :photos, as: :file %>
-  <%= f.submit class: "btn btn-custom" %>
-<% end %>
+    <%= f.input :description %>
+    <%= f.input :date, as: :date, html5: true %>
+    <%= f.input :photos, as: :file %>
+    <%= f.submit class: "btn btn-custom" %>
+  <% end %>
+</div>
