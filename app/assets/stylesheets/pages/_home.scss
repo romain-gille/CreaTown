@@ -45,3 +45,30 @@ a {
     width: auto;
   }
 }
+.home-content {
+  background-position: center;
+  background-size: cover;
+  padding: 1rem;
+  p {
+    text-align: justify;
+  }
+}
+.home-content-creation {
+  background-image: linear-gradient(
+      rgba($color: #f4f4f4, $alpha: 0.85),
+      rgba($color: #f4f4f4, $alpha: 0.85)
+    ),
+    image-url("making_art.svg");
+  height: 70vw;
+}
+.home-content-event {
+  background-image: linear-gradient(
+      rgba($color: #f4f4f4, $alpha: 0.85),
+      rgba($color: #f4f4f4, $alpha: 0.85)
+    ),
+    image-url("art_museum.svg");
+  height: 50vw;
+}
+.home-content-div {
+  height: 100%;
+}
