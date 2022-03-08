@@ -1,9 +1,9 @@
 <div class="sticky_footer" data-controller="chatroom-subscription" data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>">
   <div class="container chatroom sticky-footer-message">
     <% if @chatroom.user_connected_id == current_user.id %>
-      <h1><%= User.find(@chatroom.user_messaged_id).email%></h1>
+      <h1><%= User.find(@chatroom.user_messaged_id).user_name%></h1>
     <% else %>
-      <h1><%= User.find(@chatroom.user_connected_id).email %></h1>
+      <h1><%= User.find(@chatroom.user_connected_id).user_name %></h1>
     <% end %>
     <div class="messages" data-chatroom-subscription-target="messages">
       <% @chatroom.messages.each do |message| %>
@@ -17,7 +17,7 @@
 %>
     <%= f.input :content,
     label: false,
-    placeholder: "Message ##{@chatroom.name}",
+    placeholder: "Say something!",
     wrapper_html: {class: "flex-grow-1"}
   %>
     <%= f.submit "Send", class: "btn btn-primary" %>

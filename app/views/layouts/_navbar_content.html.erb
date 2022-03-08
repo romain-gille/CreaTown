@@ -1,6 +1,6 @@
  <% if user_signed_in? %>
   <li class="nav-item">
-    <%= link_to raw('<i class="fas fa-plus"></i> Add a Creation'), new_creation_path, class: "nav-link active"%>
+    <%= link_to raw('<i class="fas fa-plus"></i> Add a Creation'), new_creation_path, class: "nav-link "%>
   </li>
   <li class="nav-item">
     <%= link_to raw('<i class="fas fa-plus"></i> Add an Event'), new_event_path, class: "nav-link " %>
@@ -13,6 +13,15 @@
   </li>
   <li class="nav-item">
     <%= link_to raw('<i class="fas fa-comment-alt"></i> Messages'), chatrooms_path, class: "nav-link " %>
+  </li>
+  <li class="nav-item">
+    <%= link_to  current_user.email , root_path, class: "nav-link smaller-nav-user" %>
+  </li>
+  <li class="nav-item">
+    <%= link_to "Update Profile", edit_user_registration_path, class: "nav-link smaller-nav-element" %>
+  </li>
+  <li class="nav-item">
+    <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "nav-link smaller-nav-element" %>
   </li>
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">

@@ -18,5 +18,27 @@
 
 .navbar {
   background: #ff9000;
-  // height: 10vh;
+}
+.smaller-nav-element {
+  display: none;
+}
+.smaller-nav-user {
+  display: none;
+}
+
+#navbarDropdownMenuLink {
+  display: block;
+}
+@media (max-width: 768px) {
+  .smaller-nav-element {
+    display: block;
+    padding-left: 45px !important;
+    font-style: italic;
+  }
+  #navbarDropdownMenuLink {
+    display: none;
+  }
+  .smaller-nav-user {
+    display: block;
+  }
 }
