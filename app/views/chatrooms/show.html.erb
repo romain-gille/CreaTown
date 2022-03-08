@@ -2,7 +2,11 @@
   <div class="container chatroom sticky-footer-message"
   data-controller="chatroom-subscription"
   data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>">
-    <h1>#<%= @chatroom.name %></h1>
+    <% if @chatroom.user_connected_id == current_user.id %>
+      <h1><%= User.find(@chatroom.user_messaged_id).email%></h1>
+    <% else %>
+      <h1><%= User.find(@chatroom.user_connected_id).email %></h1>
+    <% end %>
     <div class="messages" data-chatroom-subscription-target="messages">
       <% @chatroom.messages.each do |message| %>
         <%= render "messages/message", message: message %>
