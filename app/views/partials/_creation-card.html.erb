@@ -12,11 +12,11 @@
     <div class="d-flex justify-content-between" style="max-width: 75%;">
       <h4><%= creation.name %></h4>
     </div>
-    <div class="card-icons-container">
-      <div class="categ-container">
-        <i class="<%= @categories[@cat_name.index(creation.category)]%> category" style="padding-right: 3px; text-align: center"></i>
+    <div class="card-icons-container ">
+      <div class="categ-container ">
+        <i class="<%= @categories[@cat_name.index(creation.category)]%> category " style="padding-right: 3px"></i>
       </div>
-      <div class="likes-container">
+      <div class="likes-container  text-center">
         <%= render partial: "partials/like", locals: {my_creation: creation, my_like: current_user.liked_creations.include?(creation) ? current_user.likes.find {|lik| lik.creation == creation} : Like.new} %>
       </div>
     </div>
