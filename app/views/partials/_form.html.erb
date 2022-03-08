@@ -1,6 +1,9 @@
 <%= simple_form_for(creation) do |f| %>
   <%= f.input :name %>
-  <%= f.input :category %>
+  <%= f.input :category, as: :radio_buttons,
+                  collection: ["art", "cooking", "photography", "collections", "garden"],
+                  input_html: { class: "tag-selector" },
+                  item_wrapper_class: 'tag-item' %>
   <%= f.input :description %>
   <%= f.input :date, as: :date, html5: true %>
   <%= f.input :photos, as: :file %>
