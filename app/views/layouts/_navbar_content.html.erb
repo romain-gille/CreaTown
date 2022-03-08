@@ -8,6 +8,9 @@
   <li class="nav-item">
     <%= link_to raw('<i class="fab fa-sistrix"></i> Creations and Events'), main_path, class: "nav-link " %>
   </li>
+  <li class="nav-item">
+    <%= link_to raw('<i class="fas fa-comment-alt"></i> Messages'), chatrooms_path, class: "nav-link " %>
+  </li>
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
       <i class="fas fa-user-alt"></i> <%= current_user.email %>

@@ -21,6 +21,13 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     @markers = []
     @markers << { lat: @event.latitude, lng: @event.longitude }
+
+    my_chatrooms = Chatroom.all.filter { |chat| chat.user_connected_id == current_user.id }
+    if my_chatrooms.filter { |chat| chat.user_messaged_id == @event.user.id }.empty?
+      @chatroom = Chatroom.new
+    else
+      @chatroom = Chatroom.all.find { |chat| chat.user_messaged_id == @event.user.id }
+    end
   end
 
   private
