@@ -1,4 +1,4 @@
-<div class="d-flex align-items-baseline" data-controller="like" data-like-target = "textandbutton">
+<div class="align-items-baseline categ-container" data-controller="like" data-like-target = "textandbutton">
   <% if current_user.liked_creations.include?(my_creation) %>
     <%= link_to like_path(my_like),{method: "delete", class: "like-button", data: { like_target:"likebutton",  action: "click->like#deletelike" }} do %>
       <i class="fas fa-heart" ></i>
@@ -8,5 +8,5 @@
       <i class="far fa-heart"></i>
     <% end %>
   <% end %>
-  <h6 class="likes-and-participations"> <%= pluralize(my_creation.likes.length, 'Like')%></h6>
+  <h6 class="likes-and-participations"> <%= my_creation.likes.length %></h6>
 </div>
