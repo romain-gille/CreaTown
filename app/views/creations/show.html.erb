@@ -1,4 +1,4 @@
-<div class="container sticky_footer">
+<div class="container sticky_footer py-3">
   <h1 class= "py-2"><%= @creation.name %></h1>
   <div class="row">
     <div class="col-12 col-lg-8 showpage-image-container py-2">
@@ -11,6 +11,7 @@
       <i class="<%= @categories[@cat_name.index(@creation.category)]%> category"></i>
       <p>Created on <%= @creation.date.strftime("%b %d, %Y") %>, by <%= @creation.user.user_name %></p>
       <%= render partial: "partials/like", locals: {my_creation: @creation, my_like: @like} %>
+      <%= render partial: "chatrooms/new_chatroom", locals: {chatroom: @chatroom, messaged_user: @creation.user} %>
     </div>
   </div>
 </div>

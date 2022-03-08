@@ -16,4 +16,7 @@ Rails.application.routes.draw do
   get 'likedcreations', to: 'dashboard#likedcreations'
   get 'myevents', to: 'dashboard#myevents'
   get 'attendedevents', to: 'dashboard#attendedevents'
+  resources :chatrooms, only: %i[index show create update] do
+    resources :messages, only: :create
+  end
 end

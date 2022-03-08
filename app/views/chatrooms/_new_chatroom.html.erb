@@ -1,0 +1,8 @@
+<% if current_user != messaged_user %>
+  <%= simple_form_for(chatroom) do |f| %>
+    <%= f.input :name, input_html: {value: "#{current_user.email} and #{messaged_user.email}", class: 'd-none' }, label_html: { class: 'd-none' } %>
+    <%= f.input :user_connected_id, input_html: {value: current_user.id , class: 'd-none'}, label_html: { class: 'd-none' } %>
+    <%= f.input :user_messaged_id, input_html: {value: messaged_user.id, class: 'd-none'}, label_html: { class: 'd-none' } %>
+    <%= f.button :submit,"Chat with #{messaged_user.email}!", class: "btn btn-custom" %>
+  <% end %>
+<% end %>
