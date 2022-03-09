@@ -1,8 +1,24 @@
 .fa-heart {
-  margin-right: 0.3rem;
+  // margin-right: 0.3rem;
   color: $our_orange;
   font-size: 1.5rem;
 }
-.likes-and-participations {
-  color: rgb(36, 36, 36);
+.categ-container {
+  text-align: center;
+}
+.like-container-showpage {
+  .categ-container {
+    text-align: left;
+    width: 100px;
+    display: flex;
+    align-items: baseline;
+  }
+  .fa-heart {
+    margin-right: 0.3rem;
+    color: $our_orange;
+    font-size: 1.5rem;
+  }
+  h6 {
+    font-size: 1.4rem;
+  }
 }

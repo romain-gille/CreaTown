@@ -2,7 +2,7 @@
   overflow: hidden;
   height: 120px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
   border-radius: 10px;
@@ -27,7 +27,7 @@
 .creation-card p {
   font-size: 12px;
   line-height: 1.4;
-  opacity: .7;
+  opacity: 0.7;
   margin-bottom: 0;
   margin-top: 8px;
 }
@@ -45,15 +45,10 @@
   flex-direction: column;
   justify-content: space-around;
   margin-right: 10px;
-
+  align-items: center;
 }
 
-.categ-container {
-  text-align: left;
-}
-
-.likes-and-participations  {
-  padding-right: 4px;
+.likes-and-participations {
   color: $our_orange;
 }
 

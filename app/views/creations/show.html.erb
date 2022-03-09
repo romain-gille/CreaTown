@@ -10,7 +10,9 @@
       <h5>Category</h5>
       <i class="<%= @categories[@cat_name.index(@creation.category)]%> category"></i>
       <p>Created on <%= @creation.date.strftime("%b %d, %Y") %>, by <%= @creation.user.user_name %></p>
-      <%= render partial: "partials/like", locals: {my_creation: @creation, my_like: @like} %>
+      <div class="like-container-showpage">
+        <%= render partial: "partials/like", locals: {my_creation: @creation, my_like: @like} %>
+      </div>
       <%= render partial: "chatrooms/new_chatroom", locals: {chatroom: @chatroom, messaged_user: @creation.user} %>
     </div>
   </div>
