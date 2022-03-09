@@ -19,8 +19,13 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    @creations = @event.creations
+    @categories = ["fas fa-paint-brush", "fas fa-utensils", "fas fa-camera-retro",
+                   "fas fa-stream", "fas fa-seedling"]
+    @cat_name = ["art", "cooking", "photography", "collections", "garden"]
     @markers = []
-    @markers << { lat: @event.latitude, lng: @event.longitude }
+    @markers << { lat: @event.latitude, lng: @event.longitude,
+                  info_window: render_to_string(partial: "partials/info-window", locals: { event: @event }) }
 
     my_chatrooms = Chatroom.all.filter { |chat| chat.user_connected_id == current_user.id }
     if my_chatrooms.filter { |chat| chat.user_messaged_id == @event.user.id }.empty?
