@@ -20,8 +20,8 @@
   }
 }
 .categories-container {
-  padding: 0;
-  background-color: $our_orange;
+  padding: 25px 0px 0px 0px;
+  // background-color: $our_orange;
   height: 90px;
 }
 
@@ -61,4 +61,9 @@ a {
 
 .main-event-card {
   position: relative;
+}
+.btn-map {
+  color: #cc7400 !important;
+  background-color: #ffb85c !important ;
+  border-color: #ffb85c !important  ;
 }
