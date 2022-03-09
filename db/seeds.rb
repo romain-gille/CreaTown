@@ -214,8 +214,8 @@ creation_data = [
   },
 
   {
-    name: "Salat",
-    description: "It is really quite easy to grow Salat. All you need is a seed and some water.",
+    name: "Salad",
+    description: "It is really quite easy to grow salad. All you need is a seed and some water.",
     category: "garden",
     date: Date.new(2021, 12, 20),
     user: users["rit"],
@@ -255,7 +255,7 @@ creation_data = [
 
   {
     name: "Sushi and Sashimi",
-    description: "My recent try on making Sushi at come.",
+    description: "My recent try on making Sushi at home.",
     category: "cooking",
     date: Date.new(2021, 12, 7),
     user: users["hir"],
@@ -304,7 +304,7 @@ events_data = [
 
   {
     user: users["jul"],
-    title: "Pop-Up Schwabing Style",
+    title: "Pop-Up Art show",
     location: "Munich, Kunstverein München",
     date: Date.new(2022, 3, 22),
     description: "I am pleased to be exhibiting my creations here. \n
