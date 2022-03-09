@@ -98,7 +98,18 @@ end
 creation_data = [
   {
     name: "Linda with big earring",
-    description: "Pastel - A4",
+    description: "The oil painting portrait of an woman with earring by artist Julie.\n
+    Scanned, printed on canvas, and hand-stretched over solid wood stretcher bars.\n
+    • Acid-free, PH-neutral, poly-cotton base \n
+    • 20.5 mil (0.5 mm) thick poly-cotton blend canvas\n
+    • Canvas fabric weight: 13.9 oz/yd2(470 g/m²)\n
+    • Fade-resistant\n
+    • Hand-stretched over solid wood stretcher bars\n
+    • Matte finish coating\n
+    • Mounting brackets included\n
+    • Are NOT hand-signed\n
+    • NOT framed\n
+    • The image of the print is adjusted to fit every canvas size listed. ",
     category: "art",
     date: Date.new(2022, 2, 22),
     user: users["jul"],
@@ -178,7 +189,13 @@ creation_data = [
 
   {
     name: "Monstera",
-    description: "This one is already quite big, amazing how fast they grow",
+    description: "This member of the arum family (Araceae) is a hemiepiphyte with aerial roots.\n
+    It is able to grow up to 20 m (66 ft) high in the wild, with large, leathery, glossy, pinnate, heart-shaped leaves 25–90 cm (10–35.5 in) long by 25–75 cm (10–29.5 in) broad.\n
+    The leaves on young plants are smaller and entire with no lobes or holes, but soon produce lobed and fenestrate leaves as they grow.\n
+    Although it can grow very tall in nature, it only measures between 2 and 3 m (6.6 and 9.8 ft) when grown indoors.\n
+    The older the plant, the more the leaves are covered with its familiar large perforations.\n
+    Wild seedlings grow towards the darkest area they can grow until they find a tree trunk, then start to grow up towards the light, creeping up the tree.\n
+    \n This one is already quite big, amazing how fast they grow",
     category: "garden",
     date: Date.new(2021, 12, 7),
     user: users["rit"],
@@ -207,7 +224,7 @@ creation_data = [
   },
 
   {
-    name: "My Stamp Collections",
+    name: "My Stamp Collection",
     description: "Postal Stamps of 110 countries",
     category: "collections",
     date: Date.new(2021, 1, 10),
@@ -217,7 +234,7 @@ creation_data = [
   },
 
   {
-    name: "My DVD collections",
+    name: "My DVD collection",
     description: "My DVD collection of Superhero movies from 1950s to 2020",
     category: "collections",
     date: Date.new(2021, 2, 17),
@@ -314,7 +331,13 @@ events_data = [
     title: "Pop-Up Schwabing Style",
     location: "Munich, Schwabing",
     date: Date.new(2022, 3, 22),
-    description: "Pop-Up Art Show at RaumEinsAtelier, Schwabing",
+    description: "I am pleased to be exhibiting my creations here. \n
+    My mission is to bridge the divide between the local people and the artist community of Munich by establishing an unequaled affiliation between the two.\n
+    Art museums historically have the ability to lend validation to an artist’s legacy.\n
+    Consequently, this collective bonding institution and community is a crucial life-line.\n
+    Especially for artists producing work in a region like Munich. \n
+    Here it is possible to have both online and at sponsored exhibitions, providing artists with new opportunities to meet and share their latest works.\n
+    \n\n Admission is always free and the public is encouraged to attend. ",
     slug: "event1",
     longitude: 11.570380,
     latitude: 48.167450,
