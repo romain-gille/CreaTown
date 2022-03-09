@@ -27,6 +27,17 @@ user_data = [
   },
 
   {
+    user_name: "Romain",
+    location: "Dachau, Munich",
+    email: "romain@romain.com",
+    password: "romain@romain.com",
+    description: "Hello, my name is Romain. I am originally from France and now I live
+    in the Dachau neighborhood of Munich. I am in Munich because I am working as an Engineer in a Automobile company.
+    My hobby is Photography. Have a look at my photos here on the app and let me know how you like them. I'd love to hear from you.",
+    slug: "rom"
+  },
+
+  {
     user_name: "James",
     location: "Giesing, Munich",
     email: "james@james.com",
@@ -183,6 +194,56 @@ creation_data = [
     user: users["rit"],
     img_url: "https://i.pinimg.com/564x/c1/50/44/c15044236283252af6e584ea8ac0a95d.jpg",
     slug: "rit2"
+  },
+
+  {
+    name: "Salat",
+    description: "It is really quite easy to grow Salat. All you need is a seed and some water.",
+    category: "garden",
+    date: Date.new(2021, 12, 20),
+    user: users["rit"],
+    img_url: "https://www.gartenflora.de/wp-content/uploads/2020/09/Salat-pflanzen-AdobeStock_SUPERMAO-.jpeg",
+    slug: "rit3"
+  },
+
+  {
+    name: "My Stamp Collections",
+    description: "Postal Stamps of 110 countries",
+    category: "collections",
+    date: Date.new(2021, 1, 10),
+    user: users["raj"],
+    img_url: "https://www.stampworld.com/media/pages/why_people_collect_stamps.jpg",
+    slug: "raj2"
+  },
+
+  {
+    name: "My DVD collections",
+    description: "My DVD collection of Superhero movies from 1950s to 2020",
+    category: "collections",
+    date: Date.new(2021, 2, 17),
+    user: users["raj"],
+    img_url: "https://movies-b26f.kxcdn.com/wp-content/uploads/2014/04/blu-rays.jpg",
+    slug: "raj3"
+  },
+
+  {
+    name: "Glaciers",
+    description: "Some breath taking Pics from my recent trip to Iceland",
+    category: "photography",
+    date: Date.new(2021, 3, 1),
+    user: users["jam"],
+    img_url: "https://www.tripsavvy.com/thmb/1xg7bh0gwFrDdLhRfCOBb3Y1dEI=/2120x1415/filters:fill(auto,1)/vatnajokull-glacier--eastern-iceland--iceland--northern-europe--838106342-ab805d2ab701454192be16aebf9a5365.jpg",
+    slug: "jam3"
+  },
+
+  {
+    name: "Sushi and Sashimi",
+    description: "My recent try on making Sushi at come.",
+    category: "cooking",
+    date: Date.new(2021, 12, 7),
+    user: users["hir"],
+    img_url: "https://www.chefspencil.com/wp-content/uploads/japanese-chef.jpg",
+    slug: "hir3"
   }
 ]
 #go through each creation_data and create creation object
@@ -201,15 +262,15 @@ puts "Creating creations :))"
 
 events_data = [
   {
-    user: users["jul"],
-    title: "Pop-Up Schwabing Style",
-    location: "Munich, Schwabing",
+    user: users["rit"],
+    title: "Tropics made easy",
+    location: "Munich, Gemeindehaus St. Johann",
     date: Date.new(2022, 3, 22),
-    description: "Pop-Up Art Show at RaumEinsAtelier, Schwabing",
-    slug: "event1",
-    longitude: 11.570380,
-    latitude: 48.167450,
-    img_url: "https://img.posterlounge.de/img/products/640000/630477/630477_poster_l.jpg"
+    description: "Gardening with Rita: what kinds of tropical plants are easy to grow in your own home.",
+    slug: "event5",
+    longitude: 11.563050,
+    latitude: 48.149629,
+    img_url: "https://www.collinsdictionary.com/images/full/gardening_380327731_1000.jpg"
   },
 
   {
@@ -249,16 +310,17 @@ events_data = [
   },
 
   {
-    user: users["rit"],
-    title: "Tropics made easy",
-    location: "Munich, Gemeindehaus St. Johann",
+    user: users["jul"],
+    title: "Pop-Up Schwabing Style",
+    location: "Munich, Schwabing",
     date: Date.new(2022, 3, 22),
-    description: "Gardening with Rita: what kinds of tropical plants are easy to grow in your own home.",
-    slug: "event5",
-    longitude: 11.563050,
-    latitude: 48.149629,
-    img_url: "https://www.collinsdictionary.com/images/full/gardening_380327731_1000.jpg"
+    description: "Pop-Up Art Show at RaumEinsAtelier, Schwabing",
+    slug: "event1",
+    longitude: 11.570380,
+    latitude: 48.167450,
+    img_url: "https://img.posterlounge.de/img/products/640000/630477/630477_poster_l.jpg"
   }
+
 ]
 events = {}
 
@@ -283,7 +345,13 @@ EventCreation.create!(event: events["event1"], creation: creations["jul2"])
 EventCreation.create!(event: events["event1"], creation: creations["jul3"])
 EventCreation.create!(event: events["event3"], creation: creations["hir1"])
 EventCreation.create!(event: events["event3"], creation: creations["hir2"])
+EventCreation.create!(event: events["event3"], creation: creations["hir3"])
 EventCreation.create!(event: events["event2"], creation: creations["jam1"])
 EventCreation.create!(event: events["event2"], creation: creations["jam2"])
+EventCreation.create!(event: events["event2"], creation: creations["jam3"])
 EventCreation.create!(event: events["event4"], creation: creations["raj1"])
+EventCreation.create!(event: events["event4"], creation: creations["raj2"])
+EventCreation.create!(event: events["event4"], creation: creations["raj3"])
 EventCreation.create!(event: events["event5"], creation: creations["rit1"])
+EventCreation.create!(event: events["event5"], creation: creations["rit2"])
+EventCreation.create!(event: events["event5"], creation: creations["rit3"])
