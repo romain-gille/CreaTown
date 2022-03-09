@@ -14,9 +14,15 @@
     </div>
     <div class="col-12 col-lg-4 showpage-image-container py-4">
       <h4>Creations at this event:</h4>
-      <%= render partial: "layouts/creations_scroll", locals: {event: @event} %>
+      <div class="card-container-dashboard">
+        <% @creations.each do |creation| %>
+          <%= render :partial => 'partials/creation-card', locals: { creation: creation, user: @user } %>
+        <% end %>
+      </div>
+      <%#= render partial: "layouts/creations_scroll", locals: {event: @event} %>
     </div>
   </div>
+  <h2>Event location</h2>
   <div style="width: 100%; height: 300px;"
   data-controller="mapbox"
   data-mapbox-markers-value="<%= @markers.to_json %>"
