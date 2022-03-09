@@ -303,10 +303,28 @@ events_data = [
   },
 
   {
+    user: users["jul"],
+    title: "Pop-Up Schwabing Style",
+    location: "Munich, Kunstverein München",
+    date: Date.new(2022, 3, 22),
+    description: "I am pleased to be exhibiting my creations here. \n
+    My mission is to bridge the divide between the local people and the artist community of Munich by establishing an unequaled affiliation between the two.\n
+    Art museums historically have the ability to lend validation to an artist’s legacy.\n
+    Consequently, this collective bonding institution and community is a crucial life-line.\n
+    Especially for artists producing work in a region like Munich. \n
+    Here it is possible to have both online and at sponsored exhibitions, providing artists with new opportunities to meet and share their latest works.\n
+    \n\n Admission is always free and the public is encouraged to attend. ",
+    slug: "event1",
+    longitude: 11.5834800,
+    latitude: 48.1428476,
+    img_url: "https://img.posterlounge.de/img/products/640000/630477/630477_poster_l.jpg"
+  },
+
+  {
     user: users["hir"],
     title: "Japalicious",
     location: "Munich, Glockenbachwerkstatt",
-    date: Date.new(2022, 1, 22),
+    date: Date.new(2022, 4, 10),
     description: "Japanese home cooking with Hiromi",
     slug: "event3",
     longitude: 11.570520,
@@ -318,30 +336,12 @@ events_data = [
     user: users["raj"],
     title: "Cosplay Time",
     location: "Munich, maxvorstadt",
-    date: Date.new(2022, 1, 24),
+    date: Date.new(2022, 3, 24),
     description: "Better than comicon: Raj's comic book collection. Trade your comics, rent a cosplayer and much more.",
     slug: "event4",
     longitude: 11.568050,
     latitude: 48.147629,
     img_url: "https://1yfd8w35xqq41q3ou63czp8h-wpengine.netdna-ssl.com/wp-content/uploads/2017/01/The-Future-of-Exhibition-Is-Here-The-Comic-Book-Convention.jpg"
-  },
-
-  {
-    user: users["jul"],
-    title: "Pop-Up Schwabing Style",
-    location: "Munich, Schwabing",
-    date: Date.new(2022, 3, 22),
-    description: "I am pleased to be exhibiting my creations here. \n
-    My mission is to bridge the divide between the local people and the artist community of Munich by establishing an unequaled affiliation between the two.\n
-    Art museums historically have the ability to lend validation to an artist’s legacy.\n
-    Consequently, this collective bonding institution and community is a crucial life-line.\n
-    Especially for artists producing work in a region like Munich. \n
-    Here it is possible to have both online and at sponsored exhibitions, providing artists with new opportunities to meet and share their latest works.\n
-    \n\n Admission is always free and the public is encouraged to attend. ",
-    slug: "event1",
-    longitude: 11.570380,
-    latitude: 48.167450,
-    img_url: "https://img.posterlounge.de/img/products/640000/630477/630477_poster_l.jpg"
   }
 
 ]
