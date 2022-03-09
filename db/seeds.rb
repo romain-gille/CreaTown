@@ -77,6 +77,7 @@ users = {}
 puts "Creating users"
 
 user_data.each do |data|
+  puts data[:user_name]
   user = User.new(user_name: data[:user_name], location: data[:location],
                   email: data[:email], password: data[:password], description: data[:description])
   slug = data[:slug]
