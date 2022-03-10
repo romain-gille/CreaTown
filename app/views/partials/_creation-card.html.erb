@@ -1,24 +1,24 @@
-<div class="creation-card mt-3">
-  <div class="img-container-card-creation">
-    <%= link_to creation_path(creation) do %>
+ <%= link_to creation_path(creation) do %>
+  <div class="creation-card mt-3">
+    <div class="img-container-card-creation">
       <% if creation.photos.attached? %>
         <img src="<%= creation.photos.first.url %>" alt="">
       <% else %>
         <img src="https://h8b6e4y4.stackpathcdn.com/wp-content/uploads/2018/02/Street-Art-Hero.jpg" alt="">
       <% end %>
-    <% end %>
-  </div>
-  <div class="creation-card-infos">
-    <div class="d-flex justify-content-between" style="max-width: 75%;">
-      <h4><%= creation.name %></h4>
     </div>
-    <div class="card-icons-container ">
-      <div class="categ-container ">
-        <i class="<%= @categories[@cat_name.index(creation.category)]%> category " style="padding-right: 3px"></i>
+    <div class="creation-card-infos">
+      <div class="d-flex justify-content-between" style="max-width: 75%;">
+        <h4><%= creation.name %></h4>
       </div>
-      <div class="likes-container  text-center">
-        <%= render partial: "partials/like", locals: {my_creation: creation, my_like: current_user.liked_creations.include?(creation) ? current_user.likes.find {|lik| lik.creation == creation} : Like.new} %>
+      <div class="card-icons-container ">
+        <div class="categ-container ">
+          <i class="<%= @categories[@cat_name.index(creation.category)]%> category " style="padding-right: 3px"></i>
+        </div>
+        <div class="likes-container  text-center">
+          <%= render partial: "partials/like", locals: {my_creation: creation, my_like: current_user.liked_creations.include?(creation) ? current_user.likes.find {|lik| lik.creation == creation} : Like.new} %>
+        </div>
       </div>
     </div>
   </div>
-</div>
+<% end %>

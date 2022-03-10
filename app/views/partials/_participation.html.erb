@@ -1,12 +1,14 @@
 <div class="d-flex align-items-baseline" data-controller="participation" data-participation-target = "textandbutton">
-  <% if current_user.attended_events.include?(my_event) %>
-    <%= link_to participation_path(my_participation),{method: "delete", class: "participation-button", data: { participation_target:"participationbutton",  action: "click->participation#deleteparticipation" }} do %>
-      <i class="fas fa-user" ></i>
+  <object type="owo/uwu">
+    <% if current_user.attended_events.include?(my_event) %>
+      <%= link_to participation_path(my_participation),{method: "delete", class: "participation-button", data: { participation_target:"participationbutton",  action: "click->participation#deleteparticipation" }} do %>
+        <i class="fas fa-user" ></i>
+      <% end %>
+    <% else %>
+      <%= link_to event_participations_path(my_event), {method: "post", :my_event => my_event, class: "participation-button", data: { participation_target:"participationbutton", action: "click->participation#addparticipation"}} do %>
+        <i class="far fa-user"></i>
+      <% end %>
     <% end %>
-  <% else %>
-    <%= link_to event_participations_path(my_event), {method: "post", :my_event => my_event, class: "participation-button", data: { participation_target:"participationbutton", action: "click->participation#addparticipation"}} do %>
-      <i class="far fa-user"></i>
-    <% end %>
-  <% end %>
+  </object>
   <h6 class= "likes-and-participations"> <%= pluralize(my_event.participations.length, 'Participant')%></h6>
 </div>
