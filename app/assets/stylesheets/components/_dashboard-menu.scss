@@ -8,3 +8,41 @@
 .container-dashboard {
   height: 3rem;
 }
+.dashbord-menu-sub {
+  width: 50%;
+}
+.dashbord-menu-main {
+  height: auto;
+}
+.fas-dashboard {
+  font-size: 1.7rem;
+  color: $our_orange;
+  padding: 0 0.2rem;
+}
+.dashboard-menu-links {
+  a {
+    text-align: center;
+    background-color: #ff9000;
+    border-radius: 5px;
+    color: white;
+    margin: 3px;
+    padding: 0 0.5rem 0.2rem 0.5rem;
+    &:hover {
+      background-color: #ffb85c;
+    }
+  }
+}
+.dashboard-menu-logos {
+  align-items: center;
+  display: flex;
+}
+.btn-dashboard-2 {
+  font-weight: bold;
+  font-size: 0.8;
+}
+.dashbord-menu-sub-left {
+  border-right: solid #ff9000 1px;
+}
+// .dashbord-menu-sub-right {
+//   padding-left: 1rem;
+// }

@@ -1,6 +1,20 @@
-<div class="d-flex justify-content-center align-items-baseline container-dashboard ">
-  <%= link_to "My Events", myevents_path ,class:"btn-dashboard mx-1" %>
-  <%= link_to "Attended Events", attendedevents_path ,class:"btn-dashboard  mx-1" %>
-  <%= link_to "My Creations", mycreations_path ,class:"btn-dashboard mx-1" %>
-  <%= link_to "Liked Creations", likedcreations_path ,class:"btn-dashboard mx-1" %>
+<div class="container-flex dashbord-menu-main d-flex mb-3">
+  <div class="dashbord-menu-sub dashbord-menu-sub-left justify-content-center d-flex">
+    <div class="dashboard-menu-logos">
+      <i class="far fa-heart fas-dashboard"></i>
+    </div >
+    <div class="d-flex flex-column dashboard-menu-links">
+      <%= link_to "Creations", likedcreations_path ,class:"btn-dashboard-2 mx-1 " %>
+      <%= link_to "Events", attendedevents_path ,class:"btn-dashboard-2  mx-1 " %>
+    </div>
+  </div>
+  <div class="dashbord-menu-sub dashbord-menu-sub-right justify-content-center d-flex">
+    <div class="dashboard-menu-logos">
+      <i class="far fa-user fas-dashboard"></i>
+    </div>
+    <div class="d-flex flex-column dashboard-menu-links">
+      <%= link_to "Creations", mycreations_path ,class:"btn-dashboard-2 mx-1 " %>
+      <%= link_to "Events", myevents_path ,class:"btn-dashboard-2 mx-1 " %>
+    </div>
+  </div>
 </div>
