@@ -98,7 +98,8 @@ end
 creation_data = [
   {
     name: "Linda with big earring",
-    description: "The oil painting portrait of an woman with earring by artist Julie.\n
+    description: "I met Linda in Cape Town. She just had this incredible smile and so much energy. I immediately
+    knew I had to paint her. If you want to get technical, check out this info:\n
     Scanned, printed on canvas, and hand-stretched over solid wood stretcher bars.\n
     • Acid-free, PH-neutral, poly-cotton base \n
     • 20.5 mil (0.5 mm) thick poly-cotton blend canvas\n
@@ -107,8 +108,8 @@ creation_data = [
     • Hand-stretched over solid wood stretcher bars\n
     • Matte finish coating\n
     • Mounting brackets included\n
-    • Are NOT hand-signed\n
-    • NOT framed\n
+    • Are not hand-signed\n
+    • not framed\n
     • The image of the print is adjusted to fit every canvas size listed. ",
     category: "art",
     date: Date.new(2022, 2, 22),
@@ -119,7 +120,9 @@ creation_data = [
 
   {
     name: "Marilyn Shoes",
-    description: "Oil on canvas",
+    description: "Oil on canvas. I have always been a huge fan of Marilyn Monroe. Maybe you noticed, I am not
+    really blonde, but blondes definitely have more fun. I am sure she would have loved these shoes and worn them
+    for that sexy, unique look she had.",
     category: "art",
     date: Date.new(2022, 2, 22),
     user: users["jul"],
@@ -129,7 +132,9 @@ creation_data = [
 
   {
     name: "Perfume bottle",
-    description: "Watercolor",
+    description: "Watercolor. \n
+    Perfume is a symbol of luxury and perfume bottles are little gems, too beautiful
+    to just be thrown away. For me they symbolize the ephemeral, the transience of beauty. ",
     category: "art",
     date: Date.new(2022, 2, 22),
     user: users["jul"],
@@ -139,7 +144,10 @@ creation_data = [
 
   {
     name: "Udon noodle",
-    description: "A traditional Japanese dish with noodles and broth",
+    description: "A traditional Japanese dish with noodles and broth\n
+    Udon and soba are typical noodle dishes in Japan. Udon is made with flour and some salt. It is then kneaded and
+     shaped like noodles. Soba, on the other hand, is made from powdered buckwheat, though in some areas,
+     flour is also used. It is also kneaded and shaped like noodles.",
     category: "cooking",
     date: Date.new(2022, 2, 28),
     user: users["hir"],
@@ -149,7 +157,12 @@ creation_data = [
 
   {
     name: "Rice bowl",
-    description: "An appetizing mixture of rice, vegetables and salmon",
+    description: "An appetizing mixture of rice, vegetables and salmon \n
+    To understand Japanese rice is to understand the history of Japan itself. Traces of wet rice cultivation in Japan
+    date back as far as 3,000 years ago during the late Jōmon period, when it\’s believed the crop was introduced from
+    mainland China to the island of Kyushu. Today, cooked white rice is a staple on the Japanese table, served daily
+    with most meals. In many Asian languages, the word for “rice” is interchangeable with the word for “meal”—conveying
+    just how essential it is.",
     category: "cooking",
     date: Date.new(2022, 3, 1),
     user: users["hir"],
@@ -159,7 +172,8 @@ creation_data = [
 
   {
     name: "Beach",
-    description: "From a trip to the wild west coast of Portugal.",
+    description: "From a trip to the wild west coast of Portugal. If you like surfing, this is the place to go
+    in Europe. Sandy beaches, big waves and friendly people, the perfect place for beginner and surf pros alike.",
     category: "photography",
     date: Date.new(2021, 12, 7),
     user: users["jam"],
@@ -169,7 +183,10 @@ creation_data = [
 
   {
     name: "Forest in Bavaria",
-    description: "I took this picture on a cold winter morning.",
+    description: "I took this picture on a cold winter morning. The great thing about Munich is that it is a big city
+    but you can always get to nature fast. There are beautiful mountains just one hour\'s drive away. On weekends,
+    I like to grap my tent and spend the night outside. Often, in the quiet of the early morning hours, is when I take my
+    the most beautiful photos.",
     category: "photography",
     date: Date.new(2021, 12, 7),
     user: users["jam"],
@@ -179,7 +196,12 @@ creation_data = [
 
   {
     name: "My comic book collection",
-    description: "Spiderman, Tarzan, and much more.",
+    description: "Spiderman, Tarzan, and much more. When I grew up, Batman was the greatest Detective, Green Lantern was
+     a Space Cop who would never abuse or harass you for being anything but human of a certain shade,
+     (important to a black child who was raised right being accused of many things for just walking into a room.)
+     The Flash was a true Science hero, you learned things reading his stories. And Superman? The ultimate Science
+     fiction story of a demi-god who had adventures and righted wrongs wherever he went. He could move planets, travel
+     through time, learn anything, do almost everything. ",
     category: "collections",
     date: Date.new(2021, 11, 7),
     user: users["raj"],
@@ -205,7 +227,13 @@ creation_data = [
 
   {
     name: "Avocado",
-    description: "It is really quite easy to grow avocados. All you need is a seed and some water.",
+    description: "It is really quite easy to grow avocados. All you need is a seed and some water.  Growing avocados
+    outdoors as productive fruit trees can be tricky, but growing them as houseplants is fun and easy, resulting in a
+    seedling that will eventually turn into an attractive little specimen with glossy, oval leaves 4 to 8 inches long.
+     True, it's unlikely your tree will ever bear fruit (unless you give it about 10 years), and even if it does, the
+     fruit from the offspring most likely won't resemble the original. But as an indoor plant, an avocado has plenty of
+      merit as a decorative novelty that grows fast in its pot, potentially growing several feet in one year. Keep in
+      mind that all parts of the avocado plant are toxic to animals.",
     category: "garden",
     date: Date.new(2021, 12, 7),
     user: users["rit"],
@@ -215,7 +243,10 @@ creation_data = [
 
   {
     name: "Salad",
-    description: "It is really quite easy to grow salad. All you need is a seed and some water.",
+    description: "It is really quite easy to grow salad. There's nothing quite like the taste of fresh-picked greens,
+     straight from the garden. For most of us, that's a pleasure reserved for spring through fall. However, salad lovers
+     can grow lettuce indoors, all winter long. Depending upon available sunlight, even urban gardeners can raise a
+     steady supply of your favorite greens on a windowsill or beneath grow lights.",
     category: "garden",
     date: Date.new(2021, 12, 20),
     user: users["rit"],
@@ -225,7 +256,11 @@ creation_data = [
 
   {
     name: "My Stamp Collection",
-    description: "Postal Stamps of 110 countries",
+    description: "Postal Stamps of 110 countries. Stamp collecting is a fun and addictive hobby that explores history,
+     geography, art and politics. It can be a therapeutic activity or an opportunity to meet likeminded people and join
+     clubs and societies (List of UK Societies and Federations). Stamp collecting is also a great hobby to encourage
+     your children to be a part of (Stamp Active). It’s an activity away from technology that can connect children to
+      the older generation, who may have also collected when they were younger. ",
     category: "collections",
     date: Date.new(2021, 1, 10),
     user: users["raj"],
@@ -235,7 +270,12 @@ creation_data = [
 
   {
     name: "My DVD collection",
-    description: "My DVD collection of Superhero movies from 1950s to 2020",
+    description: "My DVD collection of Superhero movies from 1950s to 2020. DVDs, or digital video discs, were first
+     introduced in Japan in November 1996, meaning they've now been in production for 25 years. And while many have
+     moved on — first to Blu-ray Discs, and now to streaming accounts — I still hold tight to my favourite DVDs.
+     But will these discs last the test of time? According to research published by the Canadian Conservation Institute
+      in 2010 and revised in 2019, the average lifespan of a DVD or Blu-ray is between 10 to 20 years, suggesting the
+      older titles in your library could start to fail.",
     category: "collections",
     date: Date.new(2021, 2, 17),
     user: users["raj"],
@@ -245,7 +285,10 @@ creation_data = [
 
   {
     name: "Glaciers",
-    description: "Some breath taking Pics from my recent trip to Iceland",
+    description: "Some breath taking pics from my recent trip to Iceland. In Iceland, the glaciers are the main hub for
+    adventure travel. Travelers are enchanted with the trove of ice caves beneath and outlying glacier lagoons - but
+    even beyond these attractions, the glaciers themselves are one of the country's most fascinating natural wonders.
+    Below discover the remarkable geology behind these ancient formations, dating back to the last Ice Age.",
     category: "photography",
     date: Date.new(2021, 3, 1),
     user: users["jam"],
@@ -255,7 +298,12 @@ creation_data = [
 
   {
     name: "Sushi and Sashimi",
-    description: "My recent try on making Sushi at home.",
+    description: "My recent try on making Sushi at home. The philosophy of Japanese cuisine is to respect the natural
+    palates of ingredients, which is why eating fresh, raw fish was a tradition even before the creation of what we know
+     as sushi and sashimi today. However, the idea behind these delectable dishes originated as a means of preserving
+     fish through fermentation where the fish is salted and placed in rice. Once the rice was cleaned off, the fish was
+     ready to eat. In the 15th century, a unique development shortened this process where both the fish and rice could
+      be eaten, making sushi a popular snack because of its combination of rice, a staple household food, and seafood.",
     category: "cooking",
     date: Date.new(2021, 12, 7),
     user: users["hir"],
@@ -283,7 +331,13 @@ events_data = [
     title: "Tropics made easy",
     location: "Munich, Gemeindehaus St. Johann",
     date: Date.new(2022, 3, 22),
-    description: "Gardening with Rita: what kinds of tropical plants are easy to grow in your own home.",
+    description: "Gardening with Rita: what kinds of tropical plants are easy to grow in your own home.
+    Tropical and Mediterranean garden styles are spreading through Europe. People are trying new species and new
+    techniques to create exotic gardens in colder, northern climates. While many tropical species cannot survive cold
+    winters, some can be replaced by subtropical species or tropical-looking hardy species. Tropical gardens are often
+     rich in large leaved plants, such as palms and bananas. Mediterranean gardens are not so dense and lush, they
+     rather show open vegetation, sculptured by wind and sun. Shrubs and trees are often enhanced by cacti, yuccas
+     and palms from dry habitats.",
     slug: "event5",
     longitude: 11.563050,
     latitude: 48.149629,
@@ -295,7 +349,11 @@ events_data = [
     title: "World from above",
     location: "Munich, Giesinger Bräu",
     date: Date.new(2022, 3, 18),
-    description: "The world from above - exibition of aerial photography",
+    description: "The world from above - exibition of aerial photography. Photography, especially aerial photography,
+    has an exciting new aspect - Drone Photography. Using drones to capture stunning aerial photography images is not
+    only much more straightforward and accessible now, but it's also lots of fun. With the costs of getting equipment
+    for drone photography dropping fast, professionals and hobbyists are increasingly using drones for aerial
+       photography. ",
     slug: "event2",
     longitude: 11.577060,
     latitude: 48.117440,
@@ -308,11 +366,13 @@ events_data = [
     location: "Munich, Kunstverein München",
     date: Date.new(2022, 3, 22),
     description: "I am pleased to be exhibiting my creations here. \n
-    My mission is to bridge the divide between the local people and the artist community of Munich by establishing an unequaled affiliation between the two.\n
-    Art museums historically have the ability to lend validation to an artist’s legacy.\n
+    My mission is to bridge the divide between the local people and the artist community of Munich by establishing an
+    unequaled affiliation between the two.\n
+    Art museums historically have the ability to lend validation to an artist\’s legacy.\n
     Consequently, this collective bonding institution and community is a crucial life-line.\n
     Especially for artists producing work in a region like Munich. \n
-    Here it is possible to have both online and at sponsored exhibitions, providing artists with new opportunities to meet and share their latest works.\n
+    Here it is possible to have both online and at sponsored exhibitions, providing artists with new opportunities to
+    meet and share their latest works.\n
     \n\n Admission is always free and the public is encouraged to attend. ",
     slug: "event1",
     longitude: 11.5834800,
@@ -325,7 +385,12 @@ events_data = [
     title: "Japalicious",
     location: "Munich, Glockenbachwerkstatt",
     date: Date.new(2022, 4, 10),
-    description: "Japanese home cooking with Hiromi",
+    description: "Japanese home cooking with Hiromi.
+    Indulge yourself in making Japanese cuisine or gift the experience to a friend \n
+    Ask questions and get feedback from your professionally-trained hosts \n
+    Classes include Essentials of Sushi Rolling, Festival of Japanese Street Fare and Handcraft Sushi \n
+    Either order the ingredients yourself or add on a meal kit \n
+    Duration from 75-90 minutes, and start times vary.",
     slug: "event3",
     longitude: 11.570520,
     latitude: 48.125540,
@@ -337,7 +402,8 @@ events_data = [
     title: "Cosplay Time",
     location: "Munich, maxvorstadt",
     date: Date.new(2022, 3, 24),
-    description: "Better than comicon: Raj's comic book collection. Trade your comics, rent a cosplayer and much more.",
+    description: "Better than comicon: Raj's comic book collection. Trade your comics, rent a cosplayer and much more.
+    For comic book fans of all ages, fun for the whole family.",
     slug: "event4",
     longitude: 11.568050,
     latitude: 48.147629,
