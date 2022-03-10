@@ -1,7 +1,7 @@
 <div data-mainmap-target= "content" >
   <% if events.empty? %>
-    <h2 class="text-center my-3">Sorry, there are no Events yet</h2>
-    <%= link_to "Add an Event", root_path, class: "nav-link " %>
+    <h2 class="text-center my-3">Sorry, there are no events yet</h2>
+    <%= link_to "Add an event", new_event_path, class: "nav-link " %>
   <% else %>
     <div class="main-event-card">
       <div class="horizontal-scroll">
