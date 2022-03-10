@@ -1,7 +1,7 @@
 <div class="container sticky_footer py-3">
   <div class="d-flex justify-content-start align-items-baseline">
     <%= link_to raw('<i class="fas fa-chevron-left"></i>'), main_path, class: "return-map" %>
-    <h2 >Map of Events</h2>
+    <h2 >Map of events</h2>
   </div>
   <%= render :partial => 'partials/mapbox-main', locals: { events: @events, markers: @markers } %>
 </div>

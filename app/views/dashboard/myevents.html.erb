@@ -1,9 +1,9 @@
 <div class="container sticky_footer pt-3 ">
   <%= render "partials/dashboard-menu" %>
   <div>
-    <h1>My Events</h1>
+    <h1>My events</h1>
     <% if @events.empty? %>
-      <h2 class="text-center my-3">You have no Events yet</h2>
+      <h2 class="text-center my-3">You have no events yet</h2>
     <% else %>
       <div  class="horizontal-scroll">
         <% @events.each do |event| %>
