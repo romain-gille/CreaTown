@@ -15,12 +15,13 @@
   height: auto;
 }
 .fas-dashboard {
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   color: $our_orange;
   padding: 0 0.2rem;
 }
 .dashboard-menu-links {
   a {
+    font-size: 1rem;
     text-align: center;
     background-color: #ff9000;
     border-radius: 5px;
@@ -42,7 +43,8 @@
 }
 .dashbord-menu-sub-left {
   border-right: solid #ff9000 1px;
+  padding-right: 1rem;
 }
-// .dashbord-menu-sub-right {
-//   padding-left: 1rem;
-// }
+.dashbord-menu-sub-right {
+  padding-left: 1rem;
+}
