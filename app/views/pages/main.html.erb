@@ -10,7 +10,13 @@
   <div class="container">
     <div class="d-flex justify-content-between">
       <h2 class="pt-1 pb-1">Creations</h2>
-      <h2 class="pt-1 pb-1"><%= @filter %></h2>
+      <% if @filter %>
+        <div class= "d-flex badge bg-light text-dark">
+          <%= link_to main_path, class:"" do %>
+            <h2 class="pt-1 pb-1"><%= @filter %> <i class="fas fa-times"></i></h2>
+          <% end %>
+        </div>
+      <% end %>
     </div>
     <% if @creations.empty? %>
       <h2 class="text-center my-3">Sorry, there are no creations yet</h2>

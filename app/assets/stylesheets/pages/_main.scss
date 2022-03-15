@@ -31,7 +31,7 @@
   height: 220px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  scrollbar-width: none;
+  scrollbar-width: inherit;
 
   &::-webkit-scrollbar {
     display: none;
@@ -66,4 +66,9 @@ a {
   color: #cc7400 !important;
   background-color: #ffb85c !important ;
   border-color: #ffb85c !important  ;
+}
+@media (max-width: 992px) {
+  .horizontal-scroll {
+    scrollbar-width: none;
+  }
 }
