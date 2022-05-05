@@ -1,6 +1,6 @@
 <div class="sticky_footer" data-controller="chatroom-subscription" data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>">
   <div class="container chatroom sticky-footer-message">
-    <% if @chatroom.user_connected_id == current_user.id %>
+    <% if @chatroom.user_connected_id == current_or_guest_user.id %>
       <h1><%= User.find(@chatroom.user_messaged_id).user_name%></h1>
     <% else %>
       <h1><%= User.find(@chatroom.user_connected_id).user_name %></h1>

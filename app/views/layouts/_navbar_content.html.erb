@@ -1,4 +1,4 @@
- <% if user_signed_in? %>
+ <% if current_or_guest_user %>
   <li class="nav-item">
     <%= link_to raw('<i class="fas fa-plus"></i> Add a Creation'), new_creation_path, class: "nav-link "%>
   </li>
@@ -15,7 +15,7 @@
     <%= link_to raw('<i class="fas fa-comment-alt"></i> Messages'), chatrooms_path, class: "nav-link " %>
   </li>
   <li class="nav-item">
-    <%= link_to  current_user.email , root_path, class: "nav-link smaller-nav-user" %>
+    <%= link_to  current_or_guest_user.email , root_path, class: "nav-link smaller-nav-user" %>
   </li>
   <li class="nav-item">
     <%= link_to "Update Profile", edit_user_registration_path, class: "nav-link smaller-nav-element" %>
@@ -25,7 +25,7 @@
   </li>
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-      <i class="fas fa-user-alt"></i> <%= current_user.email %>
+      <i class="fas fa-user-alt"></i> <%= current_or_guest_user.email %>
     </a>
     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
       <li><%= link_to "Account", root_path, class: "dropdown-item" %></li>

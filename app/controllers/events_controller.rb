@@ -1,12 +1,12 @@
 class EventsController < ApplicationController
   def new
     @event = Event.new
-    @creations = current_user.creations
+    @creations = current_or_guest_user.creations
   end
 
   def create
     @event = Event.new(strong_params)
-    @event.user = current_user
+    @event.user = current_or_guest_user
     if @event.save
       params[:event][:creations].each do |creation_id|
         EventCreation.create(creation_id: creation_id, event: @event)
@@ -27,7 +27,7 @@ class EventsController < ApplicationController
     @markers << { lat: @event.latitude, lng: @event.longitude,
                   info_window: render_to_string(partial: "partials/info-window", locals: { event: @event }) }
 
-    my_chatrooms = Chatroom.all.filter { |chat| chat.user_connected_id == current_user.id }
+    my_chatrooms = Chatroom.all.filter { |chat| chat.user_connected_id == current_or_guest_user.id }
     if my_chatrooms.filter { |chat| chat.user_messaged_id == @event.user.id }.empty?
       @chatroom = Chatroom.new
     else

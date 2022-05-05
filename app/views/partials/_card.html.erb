@@ -13,7 +13,7 @@
   <% end %>
   <div class = "button-container">
     <div class="likes-container">
-      <%= render partial: "partials/like", locals: {my_creation: creation, my_like: current_user.liked_creations.include?(creation) ? current_user.likes.find {|lik| lik.creation == creation} : Like.new} %>
+      <%= render partial: "partials/like", locals: {my_creation: creation, my_like: current_or_guest_user.liked_creations.include?(creation) ? current_or_guest_user.likes.find {|lik| lik.creation == creation} : Like.new} %>
     </div>
     <div class="categ-container">
       <i class="<%= @categories[@cat_name.index(creation.category)]%> category"></i>

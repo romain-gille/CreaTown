@@ -1,4 +1,4 @@
-<% if current_user.creations.empty? %>
+<% if current_or_guest_user.creations.empty? %>
   <div class="d-flex flex-column pt-5 justify-content-center no-creation-div">
     <h2 class="text-center">Please add creations before creating events</h2>
     <%= link_to "Add a Creation", new_creation_path, class: "btn btn-primary" %>
@@ -14,7 +14,7 @@
       <%= f.input :date, as: :date, html5: true %>
       <%= f.input :description %>
       <%= f.input :photo, as: :file %>
-      <% collection = current_user.creations.map { |creation| [creation.id, cl_image_tag(creation.photos.first.key, class: "creation-image" ) ] } %>
+      <% collection = current_or_guest_user.creations.map { |creation| [creation.id, cl_image_tag(creation.photos.first.key, class: "creation-image" ) ] } %>
       <%= f.input :creations, label: false, as: :check_boxes, collection: collection, label_method: :second, value_method: :first, include_hidden: false, input_html: { multiple: true, required: false } %>
       <%= f.submit class: "btn btn-custom create-event-btn" %>
     <% end %>

@@ -16,7 +16,7 @@
           <i class="<%= @categories[@cat_name.index(creation.category)]%> category " style="padding-right: 3px"></i>
         </div>
         <div class="likes-container  text-center">
-          <%= render partial: "partials/like", locals: {my_creation: creation, my_like: current_user.liked_creations.include?(creation) ? current_user.likes.find {|lik| lik.creation == creation} : Like.new} %>
+          <%= render partial: "partials/like", locals: {my_creation: creation, my_like: current_or_guest_user.liked_creations.include?(creation) ? current_or_guest_user.likes.find {|lik| lik.creation == creation} : Like.new} %>
         </div>
       </div>
     </div>

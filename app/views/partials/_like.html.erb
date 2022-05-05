@@ -1,6 +1,6 @@
 <object type="owo/uwu">
   <div class=" categ-container" data-controller="like" data-like-target = "textandbutton">
-    <% if current_user.liked_creations.include?(my_creation) %>
+    <% if current_or_guest_user.liked_creations.include?(my_creation) %>
       <%= link_to like_path(my_like),{method: "delete", class: "like-button", data: { like_target:"likebutton",  action: "click->like#deletelike" }} do %>
         <i class="fas fa-heart" ></i>
       <% end %>

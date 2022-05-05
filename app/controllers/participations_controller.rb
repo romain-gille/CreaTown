@@ -1,7 +1,7 @@
 class ParticipationsController < ApplicationController
   def create
     @event = Event.find(params[:event_id])
-    @participation = Participation.new(event: @event, user: current_user)
+    @participation = Participation.new(event: @event, user: current_or_guest_user)
     @participation.save!
     respond_to do |format|
       format.html { redirect_to event_path(@event) }

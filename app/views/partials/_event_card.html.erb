@@ -1,7 +1,7 @@
 <div class="card horizontal-scroll__item no-width-card main-event-card" style="background-image: linear-gradient(rgba(17, 93, 255, 0), rgba(17, 93, 255, 0.8)), url(<%= event.photo.attached? ? event.photo.url : "https://h8b6e4y4.stackpathcdn.com/wp-content/uploads/2018/02/Street-Art-Hero.jpg" %>); background-position: center; background-size: cover">
   <%= link_to event_path(event) do %>
     <div class="card-body card-body-container d-flex flex-column justify-content-end">
-      <%= render partial: "partials/participation", locals: {my_event: event, my_participation: current_user.attended_events.include?(event) ? current_user.participations.find {|part| part.event == event} : Participation.new} %>
+      <%= render partial: "partials/participation", locals: {my_event: event, my_participation: current_or_guest_user.attended_events.include?(event) ? current_or_guest_user.participations.find {|part| part.event == event} : Participation.new} %>
       <h4 class ="date-event"><%= event.date.strftime("%a, %d %b %Y") %></h4>
       <% if event.creations.length >0 %>
         <i class="<%= @categories[@cat_name.index(event.creations.group_by(&:itself).values.max_by(&:size).first.category)] %>  category-event"></i>

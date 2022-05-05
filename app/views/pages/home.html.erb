@@ -2,10 +2,10 @@
   <div class="content-banner d-flex flex-column align-items-center ">
     <h1>Welcome to CreaTown</h1>
     <p>You want to see the cool creations of your neighbors and find a community near you? Come in!</p>
-    <% if user_signed_in? %>
+    <% if current_or_guest_user %>
       <%= link_to "See the Creations!", main_path, class:"btn btn-custom btn-lg"  %>
     <% else %>
-      <%= link_to "Log in to see the Creations", new_user_session_path, class:"btn btn-custom btn-lg"  %>
+      <%= link_to "Log in to see the Creations ", new_user_session_path, class:"btn btn-custom btn-lg"  %>
     <% end %>
   </div>
 </div>
@@ -13,7 +13,7 @@
   <div class="row justify-content-evenly">
     <div class="col-10 col-sm-5 mt-5 home-content home-content-creation ">
       <h3 class="text-center pb-3 pt-2">Creations <%# <i class="fas fa-lightbulb"></i> %></h3>
-      <p>Share your creations with your neighborhood, find others that enjoy the same things and build a
+      <p> <%= current_or_guest_user.user_name %> Share your creations with your neighborhood, find others that enjoy the same things and build a
         community with them! There is a lot to discover: from painting and drawings, to photography, cooking, gardening.
         Your neighbors have so much to offer. Join our community and get to know them.</p>
     </div>

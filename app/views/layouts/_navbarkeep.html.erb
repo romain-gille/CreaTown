@@ -6,7 +6,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
-        <% if user_signed_in? %>
+        <% if current_or_guest_user %>
           <li class="nav-item">
             <%= link_to "Add a creation", root_path, class: "nav-link active" %>
           </li>

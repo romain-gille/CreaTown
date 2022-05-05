@@ -1,6 +1,6 @@
 <div class="d-flex align-items-baseline" data-controller="participation" data-participation-target = "textandbutton">
   <object type="owo/uwu">
-    <% if current_user.attended_events.include?(my_event) %>
+    <% if current_or_guest_user.attended_events.include?(my_event) %>
       <%= link_to participation_path(my_participation),{method: "delete", class: "participation-button", data: { participation_target:"participationbutton",  action: "click->participation#deleteparticipation" }} do %>
         <i class="fas fa-user" ></i>
       <% end %>

@@ -5,7 +5,7 @@ class CreationsController < ApplicationController
 
   def create
     @creation = Creation.new(strong_params)
-    @creation.user = current_user
+    @creation.user = current_or_guest_user
     if @creation.save
       redirect_to creation_path(@creation)
     else
@@ -17,12 +17,12 @@ class CreationsController < ApplicationController
     @categories = ["fas fa-paint-brush", "fas fa-utensils", "fas fa-camera-retro", "fas fa-stream", "fas fa-seedling"]
     @cat_name = ["art", "cooking", "photography", "collections", "garden"]
     @creation = Creation.find(params[:id])
-    if current_user.liked_creations.include?(@creation)
-      @like = current_user.likes.find { |lik| lik.creation == @creation }
+    if current_or_guest_user.liked_creations.include?(@creation)
+      @like = current_or_guest_user.likes.find { |lik| lik.creation == @creation }
     else
       @like = Like.new
     end
-    my_chatrooms = Chatroom.all.filter { |chat| chat.user_connected_id == current_user.id }
+    my_chatrooms = Chatroom.all.filter { |chat| chat.user_connected_id == current_or_guest_user.id }
     if my_chatrooms.filter { |chat| chat.user_messaged_id == @creation.user.id }.empty?
       @chatroom = Chatroom.new
     else
