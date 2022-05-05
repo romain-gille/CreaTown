@@ -3,10 +3,6 @@ class PagesController < ApplicationController
     u = User.new(user_name: "guest", email: "guest_#{rand(100)}@example.com")
     u.save!(validate: false)
     session[:guest_user_id] = u.id
-    u
-    current_or_guest_user = current_or_guest_user
-    # before_action :authenticate_user!
-    # binding.pry
   end
 
   def main
