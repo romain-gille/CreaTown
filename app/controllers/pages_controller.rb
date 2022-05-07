@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def home
-    u = User.new(user_name: "guest", email: "guest_#{rand(100)}@example.com")
+    u = User.new(user_name: "guest", email: "guest_#{rand(100)}-#{rand(100)}@example.com")
     u.save!(validate: false)
     session[:guest_user_id] = u.id
   end
